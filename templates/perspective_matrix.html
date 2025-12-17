@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Life Perspective Matrix</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+        .table-container { overflow: auto; max-height: 80vh; border: 1px solid #333; }
+        table { border-collapse: separate; border-spacing: 0; width: 100%; background: white; }
+        th, td { border: 1px solid #ddd; padding: 12px; min-width: 200px; text-align: left; vertical-align: top; font-size: 14px; }
+        
+        /* Sticky Header */
+        thead th { position: sticky; top: 0; background: #2c3e50; color: white; z-index: 10; }
+        /* Sticky Column */
+        .sticky-col { position: sticky; left: 0; background: #ebedef; font-weight: bold; z-index: 5; border-right: 2px solid #2c3e50; }
+        /* Corner Cell */
+        thead th.sticky-col { z-index: 15; background: #1a252f; }
+        
+        tr:nth-child(even) { background: #f9f9f9; }
+        .highlight-principle { background: #e8f8f5 !important; }
+    </style>
+</head>
+<body>
+    <a href="/">← Back to Dashboard</a>
+    <h2>🔍 नजरिया: आपका केंद्र अन्य क्षेत्रों को कैसे देखता है?</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="sticky-col">IF YOUR CENTER IS:</th>
+                    <th>SPOUSE / FAMILY</th>
+                    <th>MONEY / POSSESSIONS</th>
+                    <th>WORK</th>
+                    <th>FRIENDS / ENEMIES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="highlight-principle">
+                    <td class="sticky-col">PRINCIPLES</td>
+                    <td>सेवा, योगदान और पूर्ति का अवसर।</td>
+                    <td>महत्वपूर्ण प्राथमिकताओं को पूरा करने का साधन।</td>
+                    <td>सेवा और योगदान का वाहन।</td>
+                    <td>स्वतंत्र व्यक्तियों को समझना और उनकी परवाह करना।</td>
+                </tr>
+                <tr>
+                    <td class="sticky-col">PLEASURE</td>
+                    <td>मौज-मस्ती में साथी या बाधा।</td>
+                    <td>अवसरों को खरीदने का साधन।</td>
+                    <td>मौज-मस्ती के लिए पैसा जुटाने का जरिया।</td>
+                    <td>मौज-मस्ती के साथी।</td>
+                </tr>
+                <tr>
+                    <td class="sticky-col">MONEY</td>
+                    <td>आर्थिक संपत्ति या देनदारी।</td>
+                    <td>सुरक्षा और व्यक्तिगत मूल्य का स्रोत।</td>
+                    <td>पैसा कमाने का जरिया।</td>
+                    <td>आर्थिक प्रभाव के आधार पर चुने गए लोग।</td>
+                </tr>
+                <tr>
+                    <td class="sticky-col">WORK</td>
+                    <td>काम में मदद या रुकावट।</td>
+                    <td>कड़ी मेहनत का सबूत।</td>
+                    <td>संतुष्टि का मुख्य स्रोत।</td>
+                    <td>काम के आधार पर बने सामाजिक संबंध।</td>
+                </tr>
+                <tr>
+                    <td class="sticky-col">SELF</td>
+                    <td>"मेरी" जरूरतों को पूरा करने वाले।</td>
+                    <td>व्यक्तिगत संतुष्टि का साधन।</td>
+                    <td>स्वार्थ पूरा करने का वाहन।</td>
+                    <td>समर्थक या सहानुभूति देने वाले।</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -2,17 +2,22 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>जीवन प्रबंधन डैशबोर्ड</title>
+    <title>Life Management Dashboard</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; background: #f4f4f4; padding-top: 50px; }
-        .card { background: white; padding: 20px; margin: 20px auto; width: 300px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        a { text-decoration: none; color: #007bff; font-weight: bold; font-size: 1.2em; }
-        a:hover { color: #0056b3; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .menu { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; }
+        .btn { display: block; width: 280px; padding: 15px; margin: 10px auto; background: #3498db; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s; font-weight: bold; }
+        .btn:hover { background: #2980b9; transform: translateY(-2px); }
+        .btn-mission { background: #27ae60; }
+        .btn-mission:hover { background: #219150; }
     </style>
 </head>
 <body>
-    <h1>जीवन प्रबंधन डैशबोर्ड</h1>
-    <div class="card"><a href="/centers">🧭 जीवन के केंद्र (Centers of Life)</a></div>
-    <div class="card"><a href="/mission">📝 व्यक्तिगत मिशन वक्तव्य</a></div>
+    <div class="menu">
+        <h1>Management Dashboard</h1>
+        <a href="/centers-matrix" class="btn">🧭 Centers: Security & Wisdom</a>
+        <a href="/perspective-matrix" class="btn">🔍 Centers: Life Perspective</a>
+        <a href="/mission" class="btn btn-mission">📝 My Mission Statement</a>
+    </div>
 </body>
 </html>

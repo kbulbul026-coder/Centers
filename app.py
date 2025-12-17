@@ -1,19 +1,19 @@
-
 from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# होम पेज - यहाँ से आप दोनों टेबल पर जा सकते हैं
 @app.route('/')
 def index():
     return render_template('index.html')
 
-# पुराना Centers of Life पेज
-@app.route('/centers')
-def centers():
-    return render_template('centers.html')
+@app.route('/centers-matrix')
+def centers_matrix():
+    return render_template('centers_matrix.html')
 
-# आपका नया मिशन वक्तव्य पेज
+@app.route('/perspective-matrix')
+def perspective_matrix():
+    return render_template('perspective_matrix.html')
+
 @app.route('/mission')
 def mission():
     return render_template('mission.html')
