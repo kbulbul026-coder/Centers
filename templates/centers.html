@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centers of Life Table</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        
+        /* Container for the scrollable table */
+        .table-container {
+            max-width: 100%;
+            max-height: 80vh; /* Vertical scroll height */
+            overflow: auto;   /* Enables both horizontal and vertical scrolling */
+            border: 1px solid #000;
+            background: white;
+        }
+
+        table {
+            border-collapse: separate; /* Required for sticky borders to work */
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            min-width: 250px; /* Ensures horizontal scrolling triggers */
+            background-color: white;
+            vertical-align: top;
+        }
+
+        /* STICKY HEADERS */
+        thead th {
+            position: sticky;
+            top: 0;
+            z-index: 10; /* Keeps header above table body */
+            background-color: #eee;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* STICKY FIRST COLUMN (CENTER) */
+        th:first-child, td:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 5; /* Keeps column above other body cells */
+            min-width: 150px;
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+
+        /* THE CORNER CELL (Must have highest z-index) */
+        thead th:first-child {
+            z-index: 15;
+            background-color: #ddd;
+        }
+
+        h2 { text-align: center; }
+    </style>
+</head>
+<body>
+    <h2>🧭 Centers of Life: Security, Guidance, Wisdom, and Power</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>CENTER</th>
+                    <th>SECURITY</th>
+                    <th>GUIDANCE</th>
+                    <th>WISDOM</th>
+                    <th>POWER</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Money-Centered</td>
+                    <td>Your personal worth determined by your net worth. You are vulnerable to anything that threatens your economic security.</td>
+                    <td>Profits your decision-making criterion.</td>
+                    <td>Moneymaking is the lens through which life is seen and understood, creating imbalanced judgment.</td>
+                    <td>You are restricted to what you can accomplish with your money and your limited vision.</td>
+                </tr>
+                <tr>
+                    <td>Work-Centered</td>
+                    <td>You tend to define yourself by your occupational role. You are only comfortable when you are working.</td>
+                    <td>You make your decisions based on the needs and expectations of your work.</td>
+                    <td>You tend to be limited to your work role. You see your work as your life.</td>
+                    <td>Your actions are limited by work role models, occupational opportunities, organizational constraints, your boss's perceptions, and your possible inability at some point in your life to do that particular work.</td>
+                </tr>
+                <tr>
+                    <td>Possession-Centered</td>
+                    <td>Your security is based on your reputation, your social status, or the tangible things you possess. You tend to compare what you have to what others have.</td>
+                    <td>You make your decisions based on what will protect, increase, or better display your possessions.</td>
+                    <td>You see the world in terms of comparative economic and social relationships.</td>
+                    <td>You function within the limits of what you can buy or the social prominence you can achieve. Your power is almost negligible.</td>
+                </tr>
+                <tr>
+                    <td>Pleasure-Centered</td>
+                    <td>You feel secure only when you're on a pleasure high. Your security is short-lived, anesthetizing, and dependent on your environment.</td>
+                    <td>You make your decisions based on what will give you the most pleasure.</td>
+                    <td>You see the world in terms of what's in it for you.</td>
+                    <td>Your power is almost negligible.</td>
+                </tr>
+                <tr>
+                    <td>Friend-Centered</td>
+                    <td>Your security is a function of the social mirror. You are highly dependent on the opinions of others.</td>
+                    <td>Your decision-making criterion is "What will they think?"</td>
+                    <td>You are easily embarrassed. You see the world through a social lens.</td>
+                    <td>You are limited by your social comfort zone. Your actions are as fickle as opinion.</td>
+                </tr>
+                <tr>
+                    <td>Enemy-Centered</td>
+                    <td>Your security is volatile, based on the movements of your enemy. You are always wondering what he is up to.</td>
+                    <td>You make your decisions based on what will thwart your enemy.</td>
+                    <td>Your judgment is narrow and distorted. You are defensive, over-reactive, and often paranoid.</td>
+                    <td>The little power you have comes from anger, envy, resentment, and vengeance—negative energy that shrivels and destroys, leaving energy for little else.</td>
+                </tr>
+                <tr>
+                    <td>Church-Centered</td>
+                    <td>Your security is based on church activity and on the esteem in which you are held by those in authority or influence in the church. You find identity and security in religious labels and comparisons.</td>
+                    <td>You are guided by how others will evaluate your actions in the context of church teachings and expectations.</td>
+                    <td>You see the world in terms of "believers" and "nonbelievers," "belongers" and "nonbelongers."</td>
+                    <td>Perceived power comes from your church position or role.</td>
+                </tr>
+                <tr>
+                    <td>Self-Centered</td>
+                    <td>Your security is constantly changing and shifting.</td>
+                    <td>Your judgment criteria are: "If it feels good," "What I want," "What I need," "What's in it for me?"</td>
+                    <td>You view the world by how decisions, events, or circumstances will affect you.</td>
+                    <td>Your ability to act is limited to your own resources, without the benefits of interdependency.</td>
+                </tr>
+                <tr>
+                    <td>Spouse-Centered</td>
+                    <td>Your feelings of security are based on the way your spouse treats you. You are highly vulnerable to the moods and feelings of your spouse.</td>
+                    <td>Your direction comes from your own needs and wants and from those of your spouse.</td>
+                    <td>Your life perspective surrounds things that may positively or negatively influence your spouse or your relationship.</td>
+                    <td>Your power to act is limited by weaknesses in your spouse and in yourself.</td>
+                </tr>
+                <tr>
+                    <td>Family-Centered</td>
+                    <td>Your security is founded on family acceptance and fulfilling family expectations. Your sense of personal security is as stable as the family.</td>
+                    <td>Family scripting is your source of correct attitudes and behaviors.</td>
+                    <td>You interpret all of life in terms of your family, creating a partial understanding and family narcissism.</td>
+                    <td>Your actions are limited by family models and traditions.</td>
+                </tr>
+                <tr>
+                    <td>Principle-Centered</td>
+                    <td>Your security is based on correct principles that do not change regardless of external conditions or circumstances.</td>
+                    <td>You are guided by a compass (conscience educated by principles). You stand apart from situations and emotions, looking at the balanced whole.</td>
+                    <td>Your judgment encompasses a broad spectrum of long-term consequences and reflects a wise balance and quiet assurance.</td>
+                    <td>Your power is limited only by your understanding and observance of natural law and correct principles. You experience an interdependent freedom.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
