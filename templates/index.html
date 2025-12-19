@@ -2,26 +2,89 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>जीवन प्रबंधन डैशबोर्ड</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>जीवन प्रबंधन डैशबोर्ड | Life Management Dashboard</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .menu { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; }
-        .btn { display: block; width: 300px; padding: 15px; margin: 10px auto; background: #3498db; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s; font-weight: bold; }
-        .btn:hover { background: #2980b9; transform: translateY(-2px); }
-        .btn-green { background: #27ae60; }
-        .btn-green:hover { background: #219150; }
-        .btn-purple { background: #8e44ad; }
-        .btn-purple:hover { background: #7d3c98; }
+        /* मुख्य पेज की स्टाइलिंग */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+        }
+
+        .dashboard-container { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 20px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
+            text-align: center; 
+            max-width: 500px;
+            width: 90%;
+        }
+
+        h1 { color: #2c3e50; margin-bottom: 10px; font-size: 24px; }
+        p { color: #7f8c8d; margin-bottom: 30px; font-size: 16px; }
+
+        /* लिंक/बटन की स्टाइलिंग */
+        .nav-menu { display: flex; flex-direction: column; gap: 15px; }
+
+        .btn { 
+            display: block; 
+            padding: 15px 20px; 
+            text-decoration: none; 
+            color: white; 
+            border-radius: 10px; 
+            font-weight: bold; 
+            transition: all 0.3s ease; 
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .btn i { margin-right: 15px; font-style: normal; font-size: 20px; }
+
+        /* अलग-अलग बटन के रंग */
+        .btn-centers { background-color: #3498db; } /* Blue */
+        .btn-perspective { background-color: #2980b9; } /* Dark Blue */
+        .btn-skills { background-color: #8e44ad; } /* Purple */
+        .btn-stoplight { background-color: #e67e22; } /* Orange */
+        .btn-mission { background-color: #27ae60; } /* Green */
+
+        .btn:hover { transform: translateX(10px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); filter: brightness(1.1); }
     </style>
 </head>
 <body>
-    <div class="menu">
-        <h1>Management Dashboard</h1>
-        <a href="/centers-matrix" class="btn">🧭 जीवन के केंद्र (Security/Wisdom)</a>
-        <a href="/perspective-matrix" class="btn">🔍 जीवन का नजरिया (Perspectives)</a>
-        <a href="/skills-growth" class="btn btn-purple">🎓 कौशल विकास (Life Skills)</a>
-        <a href="/mission" class="btn btn-green">📝 मेरा मिशन वक्तव्य (Mission)</a>
+
+    <div class="dashboard-container">
+        <h1>Life Management Dashboard</h1>
+        <p>सिद्धांत-केंद्रित जीवन की ओर एक कदम</p>
+        
+        <div class="nav-menu">
+            <a href="/centers-matrix" class="btn btn-centers">
+                <i>🧭</i> जीवन के केंद्र (Security & Wisdom)
+            </a>
+
+            <a href="/perspective-matrix" class="btn btn-perspective">
+                <i>🔍</i> जीवन का नजरिया (Perspectives)
+            </a>
+
+            <a href="/skills-growth" class="btn btn-skills">
+                <i>🎓</i> जीवन कौशल विकास (SEL Skills)
+            </a>
+
+            <a href="/stoplight" class="btn btn-stoplight">
+                <i>🚦</i> स्टॉपलाइट मॉडल (Impulse Control)
+            </a>
+
+            <a href="/mission" class="btn btn-mission">
+                <i>📝</i> मेरा व्यक्तिगत मिशन वक्तव्य
+            </a>
+        </div>
     </div>
+
 </body>
 </html>
-
