@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>SEL विकास ढांचा</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; background: #f4f4f4; }
+        
+        /* Sidebar Styles */
+        .sidebar { width: 250px; height: 100vh; background: #2c3e50; color: white; position: fixed; padding-top: 20px; }
+        .sidebar a { padding: 15px 25px; text-decoration: none; color: #bdc3c7; display: block; transition: 0.3s; }
+        .sidebar a:hover, .sidebar a.active { background: #34495e; color: white; border-left: 5px solid #8e44ad; }
+        
+        /* Main Content */
+        .main { margin-left: 250px; padding: 40px; width: calc(100% - 250px); }
+        .table-container { overflow: auto; max-height: 70vh; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        table { border-collapse: separate; border-spacing: 0; width: 100%; background: white; }
+        th, td { padding: 18px; border: 1px solid #eee; min-width: 250px; vertical-align: top; }
+        
+        thead th { position: sticky; top: 0; background: #8e44ad; color: white; z-index: 10; }
+        .sticky-col { position: sticky; left: 0; background: #fdfaff; font-weight: bold; z-index: 5; border-right: 2px solid #8e44ad; }
+        
+        .stoplight-box { background: #fff3cd; border-left: 5px solid #ffc107; padding: 10px; margin-top: 10px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h3 style="text-align: center;">Life Dashboard</h3>
+    <a href="/">🧭 जीवन के केंद्र</a>
+    <a href="/perspective">🔍 नजरिया (Perspectives)</a>
+    <a href="/skills" class="active">🎓 कौशल विकास (SEL)</a>
+    <a href="/mission">📝 मिशन वक्तव्य</a>
+</div>
+
+<div class="main">
+    <h2 style="color: #2c3e50;">🎓 सामाजिक-भावनात्मक कौशल (SEL) विकास</h2>
+    <p>यह ढांचा बच्चों को भावनात्मक और सामाजिक रूप से परिपक्व बनाने में मदद करता है।</p>
+    
+    
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="sticky-col">ग्रेड स्तर</th>
+                    <th>प्रमुख गतिविधियाँ</th>
+                    <th>उद्देश्य और लाभ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="sticky-col">पहली कक्षा</td>
+                    <td><strong>"फीलिंग्स क्यूब":</strong> भावनाओं का वर्णन करना।</td>
+                    <td>भावनाओं को शब्दों से जोड़ना। दूसरों को सुनकर <strong>सहानुभूति (Empathy)</strong> बढ़ाना।</td>
+                </tr>
+                <tr>
+                    <td class="sticky-col">चौथी और पाँचवीं</td>
+                    <td>आवेग नियंत्रण और क्रोध प्रबंधन। चेहरे के हाव-भाव पढ़ना।</td>
+                    <td>
+                        <strong>"स्टॉपलाइट" (Stoplight) मॉडल:</strong> कार्य करने से पहले सोचने में मदद।
+                        <div class="stoplight-box">
+                            🚥 यह भावनात्मक क्षणों में प्रतिक्रिया देने के बजाय मापा हुआ तरीका प्रदान करता है।
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="sticky-col">छठी कक्षा</td>
+                    <td>सेक्स, ड्रग्स और शराब के दबावों से निपटना।</td>
+                    <td>किशोरावस्था के जोखिमों के लिए मानसिक तैयारी और मजबूती।</td>
+                </tr>
+                <tr>
+                    <td class="sticky-col">नौवीं कक्षा</td>
+                    <td><strong>बहु-दृष्टिकोण (Multiple Perspectives):</strong> दूसरों के पक्ष को समझना।</td>
+                    <td>टकराव (Conflict) के बजाय समाधान खोजना। जटिल सामाजिक स्थितियों को संभालना।</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

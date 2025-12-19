@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>स्टॉपलाइट मॉडल - आवेग नियंत्रण</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; background: #f8f9fa; }
+        
+        /* Sidebar Styles */
+        .sidebar { width: 250px; height: 100vh; background: #2c3e50; color: white; position: fixed; padding-top: 20px; }
+        .sidebar a { padding: 15px 25px; text-decoration: none; color: #bdc3c7; display: block; transition: 0.3s; }
+        .sidebar a:hover, .sidebar a.active { background: #34495e; color: white; border-left: 5px solid #e74c3c; }
+        
+        /* Main Content */
+        .main { margin-left: 250px; padding: 40px; width: calc(100% - 250px); }
+        
+        /* Stoplight Design */
+        .stoplight-card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .light-row { display: flex; align-items: flex-start; margin-bottom: 25px; padding: 20px; border-radius: 10px; }
+        
+        .circle { min-width: 60px; height: 60px; border-radius: 50%; margin-right: 25px; box-shadow: 0 0 15px rgba(0,0,0,0.2); }
+        
+        .red-row { background: #ffeef0; border-left: 10px solid #e74c3c; }
+        .red-circle { background: #e74c3c; }
+        
+        .yellow-row { background: #fffdf0; border-left: 10px solid #f1c40f; }
+        .yellow-circle { background: #f1c40f; }
+        
+        .green-row { background: #f0fff4; border-left: 10px solid #2ecc71; }
+        .green-circle { background: #2ecc71; }
+
+        h3 { margin-top: 0; }
+        .step-no { font-weight: bold; color: #555; font-size: 1.1em; }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h3 style="text-align: center;">Life Dashboard</h3>
+    <a href="/">🧭 जीवन के केंद्र</a>
+    <a href="/perspective">🔍 नजरिया (Perspectives)</a>
+    <a href="/skills">🎓 कौशल विकास (SEL)</a>
+    <a href="/stoplight" class="active">🚦 स्टॉपलाइट मॉडल</a>
+    <a href="/mission">📝 मिशन वक्तव्य</a>
+</div>
+
+<div class="main">
+    <div class="stoplight-card">
+        <h2 style="text-align: center; color: #2c3e50;">🚦 स्टॉपलाइट मॉडल: कार्य करने से पहले सोचें</h2>
+        <p style="text-align: center; font-style: italic; color: #666;">भावनात्मक क्षणों को मापा तरीके से संभालने के 6 चरण</p>
+
+        <div class="light-row red-row">
+            <div class="circle red-circle"></div>
+            <div>
+                <h3>🔴 लाल बत्ती (Red Light)</h3>
+                <p><span class="step-no">चरण 1:</span> <strong>रुको, शांत हो जाओ, और कार्य करने से पहले सोचो।</strong></p>
+                <p>यह सबसे महत्वपूर्ण कदम है—आवेग (impulse) पर कार्य करने से पहले खुद को रोकना।</p>
+            </div>
+        </div>
+
+        <div class="light-row yellow-row">
+            <div class="circle yellow-circle"></div>
+            <div>
+                <h3>🟡 पीली बत्ती (Yellow Light)</h3>
+                <p><span class="step-no">चरण 2:</span> समस्या और अपनी भावना बताओ। (अपनी भावना को नाम दें)</p>
+                <p><span class="step-no">चरण 3:</span> एक सकारात्मक लक्ष्य निर्धारित करो। (जैसे, शांतिपूर्ण समाधान)</p>
+                <p><span class="step-no">चरण 4:</span> ढेर सारे समाधानों के बारे में सोचो। (विकल्पों पर विचार)</p>
+                <p><span class="step-no">चरण 5:</span> परिणामों के बारे में पहले से सोचो। (अच्छे और बुरे प्रभावों का आकलन)</p>
+            </div>
+        </div>
+
+        <div class="light-row green-row">
+            <div class="circle green-circle"></div>
+            <div>
+                <h3>🟢 हरी बत्ती (Green Light)</h3>
+                <p><span class="step-no">चरण 6:</span> <strong>आगे बढ़ो और सबसे अच्छी योजना आज़माओ।</strong></p>
+                <p>सबसे संतुलित और प्रभावी समाधान को चुनें और उस पर अमल करें।</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
