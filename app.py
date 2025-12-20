@@ -30,5 +30,11 @@ def victory_hour():
 def mission():
     return render_template('mission.html')
 
+# app.py में नया रूट जोड़ें
+@app.route('/success-denominator')
+def success_denominator():
+    return render_template('success_denominator.html')
+
+
 if __name__ == '__main__':
     app.run(debug=False)
