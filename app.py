@@ -22,6 +22,10 @@ def skills_growth():
 def stoplight():
     return render_template('stoplight.html')
 
+@app.route('/victory-hour') # नया रूट
+def victory_hour():
+    return render_template('victory_hour.html')
+
 @app.route('/mission')
 def mission():
     return render_template('mission.html')
