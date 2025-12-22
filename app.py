@@ -22,19 +22,21 @@ def skills_growth():
 def stoplight():
     return render_template('stoplight.html')
 
-@app.route('/victory-hour') # नया रूट
+@app.route('/victory-hour')
 def victory_hour():
     return render_template('victory_hour.html')
 
-@app.route('/mission')
-def mission():
-    return render_template('mission.html')
-
-# app.py में नया रूट जोड़ें
 @app.route('/success-denominator')
 def success_denominator():
     return render_template('success_denominator.html')
 
+@app.route('/legacy-service')
+def legacy_service():
+    return render_template('legacy_service.html')
+
+@app.route('/mission')
+def mission():
+    return render_template('mission.html')
 
 if __name__ == '__main__':
     app.run(debug=False)

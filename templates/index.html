@@ -2,110 +2,33 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>जीवन प्रबंधन डैशबोर्ड | Life Management Dashboard</title>
+    <title>Life Management Dashboard</title>
     <style>
-        /* मुख्य पेज की स्टाइलिंग */
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            margin: 0; 
-        }
-
-        .dashboard-container { 
-            background: white; 
-            padding: 40px; 
-            border-radius: 20px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2); 
-            text-align: center; 
-            max-width: 500px;
-            width: 90%;
-        }
-
-        h1 { color: #2c3e50; margin-bottom: 10px; font-size: 24px; }
-        p { color: #7f8c8d; margin-bottom: 30px; font-size: 16px; }
-
-        /* लिंक/बटन की स्टाइलिंग */
-        .nav-menu { display: flex; flex-direction: column; gap: 15px; }
-
-        .btn { 
-            display: block; 
-            padding: 15px 20px; 
-            text-decoration: none; 
-            color: white; 
-            border-radius: 10px; 
-            font-weight: bold; 
-            transition: all 0.3s ease; 
-            text-align: left;
-            display: flex;
-            align-items: center;
-        }
-
-        .btn i { margin-right: 15px; font-style: normal; font-size: 20px; }
-
-        /* अलग-अलग बटन के रंग */
-        .btn-centers { background-color: #3498db; } /* Blue */
-        .btn-perspective { background-color: #2980b9; } /* Dark Blue */
-        .btn-skills { background-color: #8e44ad; } /* Purple */
-        .btn-stoplight { background-color: #e67e22; } /* Orange */
-        .btn-mission { background-color: #27ae60; } /* Green */
-
-        .btn:hover { transform: translateX(10px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); filter: brightness(1.1); }
-
-        .btn-victory { background-color: #f1c40f; color: #2c3e50 !important; } /* Gold/Yellow */
-
-
-        .btn-denominator { background-color: #7f8c8d; } /* Grey for strong foundation */
-
-
-
+        body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .dashboard { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); text-align: center; width: 450px; }
+        .nav-menu { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; }
+        .btn { display: flex; align-items: center; padding: 14px; text-decoration: none; color: white; border-radius: 10px; font-weight: bold; transition: 0.3s; text-align: left; }
+        .btn:hover { transform: translateX(10px); filter: brightness(1.1); }
+        .btn i { margin-right: 15px; font-size: 20px; font-style: normal; }
+        .c1 { background: #3498db; } .c2 { background: #2980b9; } .c3 { background: #8e44ad; }
+        .c4 { background: #e67e22; } .c5 { background: #f1c40f; color: #2c3e50 !important; } 
+        .c6 { background: #7f8c8d; } .c7 { background: #d35400; } .c8 { background: #27ae60; }
     </style>
 </head>
 <body>
-
-    <div class="dashboard-container">
-        <h1>Life Management Dashboard</h1>
-        <p>सिद्धांत-केंद्रित जीवन की ओर एक कदम</p>
-        
+    <div class="dashboard">
+        <h1>Life Dashboard</h1>
+        <p>सिद्धांत-केंद्रित जीवन का प्रबंधन</p>
         <div class="nav-menu">
-            <a href="/centers-matrix" class="btn btn-centers">
-                <i>🧭</i> जीवन के केंद्र (Security & Wisdom)
-            </a>
-
-            <a href="/perspective-matrix" class="btn btn-perspective">
-                <i>🔍</i> जीवन का नजरिया (Perspectives)
-            </a>
-
-            <a href="/skills-growth" class="btn btn-skills">
-                <i>🎓</i> जीवन कौशल विकास (SEL Skills)
-            </a>
-
-            <a href="/stoplight" class="btn btn-stoplight">
-                <i>🚦</i> स्टॉपलाइट मॉडल (Impulse Control)
-            </a>
-
-            <a href="/mission" class="btn btn-mission">
-                <i>📝</i> मेरा व्यक्तिगत मिशन वक्तव्य
-            </a>
-
-<a href="/victory-hour" class="btn btn-victory">
-    <i>🏆</i> रोबिन शर्मा का "Victory Hour" (20/20/20)
-</a>
-
-
-
-<a href="/success-denominator" class="btn btn-denominator">
-    <i>⚖️</i> सफलता का सामान्य विभाजक (Success Denominator)
-</a>
-
-
-
+            <a href="/centers-matrix" class="btn c1"><i>🧭</i> Centers: Security & Wisdom</a>
+            <a href="/perspective-matrix" class="btn c2"><i>🔍</i> Centers: Perspectives</a>
+            <a href="/skills-growth" class="btn c3"><i>🎓</i> SEL Skills & Growth</a>
+            <a href="/stoplight" class="btn c4"><i>🚦</i> Stoplight Model</a>
+            <a href="/victory-hour" class="btn c5"><i>🏆</i> Victory Hour (20/20/20)</a>
+            <a href="/success-denominator" class="btn c6"><i>⚖️</i> Success Denominator</a>
+            <a href="/legacy-service" class="btn c7"><i>🕯️</i> Legacy & Service</a>
+            <a href="/mission" class="btn c8"><i>📝</i> My Mission Statement</a>
         </div>
     </div>
-
 </body>
 </html>
