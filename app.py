@@ -42,6 +42,14 @@ def mission():
 def win_win():
     return render_template('win_win.html')
 
+@app.route('/maturity-continuum')
+def maturity():
+    return render_template('maturity_continuum.html')
+
+@app.route('/ppc-balance')
+def ppc_balance():
+    return render_template('ppc_balance.html')
+
 
 if __name__ == '__main__':
     app.run(debug=False)
