@@ -38,5 +38,10 @@ def legacy_service():
 def mission():
     return render_template('mission.html')
 
+@app.route('/win-win')
+def win_win():
+    return render_template('win_win.html')
+
+
 if __name__ == '__main__':
     app.run(debug=False)
