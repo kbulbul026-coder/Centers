@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>XYZ फॉर्मूला - हाइम गिनॉट</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; background: #fdfefe; }
+        .sidebar { width: 250px; height: 100vh; background: #2c3e50; color: white; position: fixed; padding-top: 20px; }
+        .sidebar a { padding: 15px 25px; text-decoration: none; color: #bdc3c7; display: block; }
+        .main { margin-left: 250px; padding: 40px; width: calc(100% - 250px); line-height: 1.6; }
+        
+        .formula-card { background: white; border-top: 8px solid #34495e; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .step { display: flex; align-items: center; margin-bottom: 15px; font-size: 1.2em; }
+        .step-letter { background: #34495e; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 15px; font-weight: bold; }
+        
+        .comparison-box { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .bad { background: #fdedec; padding: 20px; border-radius: 10px; border: 1px solid #fadbd8; }
+        .good { background: #e8f8f5; padding: 20px; border-radius: 10px; border: 1px solid #d1f2eb; }
+        h4 { margin-top: 0; }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h3 style="text-align: center;">Life Dashboard</h3>
+    <a href="/">🏠 होम (Dashboard)</a>
+    <a href="/xyz-formula" style="color: white; font-weight: bold;">💬 XYZ फॉर्मूला</a>
+    <a href="/father-forgets">❤️ फादर फॉरगेट्स</a>
+    <a href="/stoplight">🚦 स्टॉपलाइट मॉडल</a>
+    <a href="/mission">📝 मिशन वक्तव्य</a>
+</div>
+
+<div class="main">
+    <div class="formula-card">
+        <h1>💬 हाइम गिनॉट का XYZ फॉर्मूला</h1>
+        <p>रिश्तों में शिकायत व्यक्त करने का सबसे प्रभावी और सम्मानजनक तरीका।</p>
+        <hr>
+        
+        <div class="step">
+            <div class="step-letter">X</div>
+            <div><strong>जब आपने "X" किया...</strong> (व्यवहार का वर्णन करें)</div>
+        </div>
+        <div class="step">
+            <div class="step-letter">Y</div>
+            <div><strong>तो मुझे "Y" महसूस हुआ...</strong> (अपनी भावना व्यक्त करें)</div>
+        </div>
+        <div class="step">
+            <div class="step-letter">Z</div>
+            <div><strong>मैं चाहूंगा कि आप इसके बजाय "Z" करें।</strong> (स्पष्ट समाधान दें)</div>
+        </div>
+    </div>
+
+    <div class="comparison-box">
+        <div class="bad">
+            <h4>❌ गलत तरीका (आरोप)</h4>
+            <p>"तुम एक लापरवाह और स्वार्थी इंसान हो!"</p>
+            <small>परिणाम: व्यक्ति रक्षात्मक (defensive) हो जाता है और झगड़ा बढ़ता है।</small>
+        </div>
+        <div class="good">
+            <h4>✅ सही तरीका (XYZ)</h4>
+            <p>"<strong>जब</strong> आपने मुझे देर होने की सूचना नहीं दी, <strong>तो</strong> मुझे उपेक्षित और गुस्सा महसूस हुआ। <strong>मैं चाहता हूँ</strong> कि आगे से आप मुझे कॉल करके बता दें।"</p>
+            <small>परिणाम: व्यक्ति आपकी समस्या को समझता है और सुधार की संभावना बढ़ती है।</small>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; background: #f4f4f4; padding: 20px; border-radius: 8px;">
+        <strong>💡 क्यों काम करता है?</strong> यह व्यक्ति पर हमला करने के बजाय (Personal Attack) उसके **व्यवहार** पर ध्यान केंद्रित करता है, जिससे बातचीत 'Win/Win' समाधान की ओर बढ़ती है।
+    </div>
+</div>
+
+</body>
+</html>

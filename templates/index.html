@@ -1,97 +1,88 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <title>Life Management Dashboard</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .dashboard { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.2); text-align: center; width: 450px; }
-        .nav-menu { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; }
-        .btn { display: flex; align-items: center; padding: 14px; text-decoration: none; color: white; border-radius: 10px; font-weight: bold; transition: 0.3s; text-align: left; }
-        .btn:hover { transform: translateX(10px); filter: brightness(1.1); }
-        .btn i { margin-right: 15px; font-size: 20px; font-style: normal; }
-        .c1 { background: #3498db; } .c2 { background: #2980b9; } .c3 { background: #8e44ad; }
-        .c4 { background: #e67e22; } .c5 { background: #f1c40f; color: #2c3e50 !important; } 
-        .c6 { background: #7f8c8d; } .c7 { background: #d35400; } .c8 { background: #27ae60; }
+        :root {
+            --primary-dark: #2c3e50;
+            --accent-blue: #3498db;
+            --accent-green: #27ae60;
+            --accent-red: #e74c3c;
+            --accent-purple: #8e44ad;
+            --accent-gold: #f1c40f;
+            --bg-light: #f5f7fa;
+        }
 
-       .btn-winwin { background-color: #16a085; } /* Sea Green for harmony */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg-light); margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        
+        .dashboard-card { background: white; width: 500px; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; }
+        
+        /* Quick Tip Widget Style */
+        #quick-tip-box { background: #fff9c4; padding: 15px; border-radius: 10px; margin-bottom: 25px; border-left: 5px solid var(--accent-gold); text-align: left; }
+        
+        .nav-menu { display: grid; grid-template-columns: 1fr; gap: 10px; }
+        
+        .btn { 
+            display: flex; align-items: center; padding: 12px 18px; text-decoration: none; color: white; border-radius: 8px; font-weight: 500; transition: transform 0.2s, filter 0.2s; 
+        }
+        .btn:hover { transform: scale(1.02); filter: brightness(1.1); }
+        .btn i { margin-right: 15px; font-size: 1.2rem; font-style: normal; }
 
-
-
-    .btn-maturity { background-color: #9b59b6; }
-    .btn-ppc { background-color: #f39c12; }
-
-
-    .btn-heart { background-color: #e74c3c; } /* Red for Love & Emotion */
-
-
+        /* Button Colors */
+        .c-centers { background: var(--accent-blue); }
+        .c-skills { background: var(--accent-purple); }
+        .c-stoplight { background: #e67e22; }
+        .c-victory { background: var(--accent-gold); color: #2c3e50 !important; }
+        .c-success { background: #7f8c8d; }
+        .c-xyz { background: #34495e; }
+        .c-legacy { background: #d35400; }
+        .c-heart { background: var(--accent-red); }
+        .c-mission { background: var(--accent-green); }
     </style>
 </head>
 <body>
-    <div class="dashboard">
+
+    <div class="dashboard-card">
         <h1>Life Dashboard</h1>
-        <p>सिद्धांत-केंद्रित जीवन का प्रबंधन</p>
+        
+        <div id="quick-tip-box">
+            <small style="color: #f39c12; font-weight: bold;">💡 आज की सीख</small>
+            <p id="tip-text" style="margin: 5px 0 0 0; color: #2c3e50; font-size: 14px; font-style: italic;">लोड हो रहा है...</p>
+        </div>
+
         <div class="nav-menu">
-            <a href="/centers-matrix" class="btn c1"><i>🧭</i> Centers: Security & Wisdom</a>
-            <a href="/perspective-matrix" class="btn c2"><i>🔍</i> Centers: Perspectives</a>
-            <a href="/skills-growth" class="btn c3"><i>🎓</i> SEL Skills & Growth</a>
-            <a href="/stoplight" class="btn c4"><i>🚦</i> Stoplight Model</a>
-            <a href="/victory-hour" class="btn c5"><i>🏆</i> Victory Hour (20/20/20)</a>
-            <a href="/success-denominator" class="btn c6"><i>⚖️</i> Success Denominator</a>
-            <a href="/legacy-service" class="btn c7"><i>🕯️</i> Legacy & Service</a>
-            <a href="/mission" class="btn c8"><i>📝</i> My Mission Statement</a>
-
-<a href="/win-win" class="btn btn-winwin">
-    <i>🤝</i> विन/विन सिद्धांत (Win/Win Principle)
-</a>
-
-<a href="/maturity-continuum" class="btn btn-maturity">
-    <i>📈</i> परिपक्वता का क्रम (Maturity Continuum)
-</a>
-<a href="/ppc-balance" class="btn btn-ppc">
-    <i>⚖️</i> P/PC संतुलन (Effectiveness Balance)
-</a>
-
-<a href="/father-forgets" class="btn btn-heart">
-    <i>❤️</i> फादर फॉरगेट्स (Father Forgets)
-</a>
-
-
+            <a href="/centers-matrix" class="btn c-centers"><i>🧭</i> जीवन के केंद्र (Covey)</a>
+            <a href="/skills-growth" class="btn c-skills"><i>🎓</i> SEL कौशल विकास</a>
+            <a href="/stoplight" class="btn c-stoplight"><i>🚦</i> स्टॉपलाइट (आवेग नियंत्रण)</a>
+            <a href="/xyz-formula" class="btn c-xyz"><i>💬</i> XYZ फॉर्मूला (संवाद कौशल)</a>
+            <a href="/victory-hour" class="btn c-victory"><i>🏆</i> Victory Hour (20/20/20)</a>
+            <a href="/success-denominator" class="btn c-success"><i>⚖️</i> सफलता का विभाजक</a>
+            <a href="/father-forgets" class="btn c-heart"><i>❤️</i> फादर फॉरगेट्स</a>
+            <a href="/legacy-service" class="btn c-legacy"><i>🕯️</i> सेवा और योगदान</a>
+            <a href="/mission" class="btn c-mission"><i>📝</i> मिशन वक्तव्य</a>
         </div>
     </div>
 
-<div id="quick-tip-box" style="background: #fff9c4; padding: 15px; border-radius: 12px; margin-bottom: 25px; border-left: 5px solid #f1c40f; text-align: left; transition: 0.5s;">
-    <small style="color: #f39c12; font-weight: bold; text-transform: uppercase;">💡 आज का मंत्र</small>
-    <p id="tip-text" style="margin: 5px 0 0 0; color: #2c3e50; font-size: 15px; font-style: italic;">लोड हो रहा है...</p>
-</div>
+    <script>
+        const tips = [
+            "जब आपने X किया, तो मुझे Y महसूस हुआ, और मैं चाहूँगा कि आप Z करें। (💬 XYZ)",
+            "रुको, शांत हो जाओ और सोचने के बाद प्रतिक्रिया दो। (🔴 स्टॉपलाइट)",
+            "वह तो अभी बच्चा है... छोटा सा बच्चा! (❤️ फादर फॉरगेट्स)",
+            "हंस को बचाओ ताकि स्वर्ण अंडे मिलते रहें। (⚖️ P/PC संतुलन)",
+            "क्या यह समाधान हम दोनों के लिए फायदेमंद है? (🤝 Win/Win)",
+            "सफल लोग वो करते हैं जो असफल लोग नहीं करना चाहते। (⚖️ सफलता का विभाजक)",
+            "अपनी सुबह को संभालें, आपका जीवन खुद संभल जाएगा। (🏆 Victory Hour)",
+            "पहले 20 मिनट: पसीना बहाएं और ऊर्जा बढ़ाएं। (🏃 Move)",
+            "समस्या को पहचानें और अपनी भावना को नाम दें। (🟡 पीली बत्ती)",
+            "मेरा जीवन एक भव्य मशाल है, इसे और तेज चमकाना है। (🕯️ निस्वार्थ सेवा)"
+        ];
 
-<script>
-    // सिद्धांतों का संग्रह
-    const tips = [
-        "रुको, शांत हो जाओ और सोचने के बाद प्रतिक्रिया दो। (🔴 स्टॉपलाइट)",
-        "वह तो अभी बच्चा है... छोटा सा बच्चा! (❤️ फादर फॉरगेट्स)",
-        "हंस को बचाओ ताकि स्वर्ण अंडे मिलते रहें। (⚖️ P/PC संतुलन)",
-        "क्या यह समाधान हम दोनों के लिए फायदेमंद है? (🤝 Win/Win)",
-        "सेवा वह किराया है, जो हम इस धरती पर रहने के लिए चुकाते हैं। (🕯️ सेवा)",
-        "सफल लोग वो करते हैं जो असफल लोग नहीं करना चाहते। (⚖️ सफलता का विभाजक)",
-        "पहले 20 मिनट: पसीना बहाएं और ऊर्जा बढ़ाएं। (🏆 Victory Hour)",
-        "समस्या को पहचानें और अपनी भावना को नाम दें। (🟡 स्टॉपलाइट)",
-        "मेरा जीवन एक भव्य मशाल है, इसे और तेज चमकाना है। (🕯️ जॉर्ज बर्नार्ड शॉ)",
-        "परिणाम की इच्छा को असुविधा से बड़ा बनाएं। (⚖️ सफलता का विभाजक)"
-    ];
-
-    // रैंडम टिप चुनने का फंक्शन
-    function showRandomTip() {
-        const randomIndex = Math.floor(Math.random() * tips.length);
-        document.getElementById('tip-text').innerText = tips[randomIndex];
-    }
-
-    // पेज लोड होते ही टिप दिखाएं
-    window.onload = showRandomTip;
-</script>
-
-
-
+        function showRandomTip() {
+            const randomIndex = Math.floor(Math.random() * tips.length);
+            document.getElementById('tip-text').innerText = tips[randomIndex];
+        }
+        window.onload = showRandomTip;
+    </script>
 </body>
 </html>

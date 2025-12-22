@@ -41,5 +41,10 @@ def father(): return render_template('father_forgets.html')
 @app.route('/mission')
 def mission(): return render_template('mission.html')
 
+@app.route('/xyz-formula')
+def xyz_formula():
+    return render_template('xyz_formula.html')
+
+
 if __name__ == '__main__':
     app.run(debug=False)
