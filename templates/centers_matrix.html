@@ -6,58 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centers of Life Table</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
-        
-        /* Container for the scrollable table */
-        .table-container {
-            max-width: 100%;
-            max-height: 80vh; /* Vertical scroll height */
-            overflow: auto;   /* Enables both horizontal and vertical scrolling */
-            border: 1px solid #000;
-            background: white;
-        }
+:root {
+    --primary-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --sidebar-bg: #0f172a;
+    --accent-color: #6366f1; /* Indigo */
+}
 
-        table {
-            border-collapse: separate; /* Required for sticky borders to work */
-            border-spacing: 0;
-            width: 100%;
-        }
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-bg: #0f172a;
+        --card-bg: #1e293b;
+        --text-main: #f1f5f9;
+        --sidebar-bg: #020617;
+    }
+}
 
-        th, td {
-            border: 1px solid #000;
-            padding: 10px;
-            min-width: 250px; /* Ensures horizontal scrolling triggers */
-            background-color: white;
-            vertical-align: top;
-        }
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-main);
+    margin: 0;
+    display: flex;
+    transition: all 0.3s ease;
+}
 
-        /* STICKY HEADERS */
-        thead th {
-            position: sticky;
-            top: 0;
-            z-index: 10; /* Keeps header above table body */
-            background-color: #eee;
-            font-weight: bold;
-            text-align: center;
-        }
+/* Sidebar Styling */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: var(--sidebar-bg);
+    color: white;
+    position: fixed;
+    padding: 20px 0;
+    overflow-y: auto;
+}
 
-        /* STICKY FIRST COLUMN (CENTER) */
-        th:first-child, td:first-child {
-            position: sticky;
-            left: 0;
-            z-index: 5; /* Keeps column above other body cells */
-            min-width: 150px;
-            background-color: #f9f9f9;
-            font-weight: bold;
-        }
+.sidebar-link {
+    padding: 12px 24px;
+    text-decoration: none;
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.2s;
+}
 
-        /* THE CORNER CELL (Must have highest z-index) */
-        thead th:first-child {
-            z-index: 15;
-            background-color: #ddd;
-        }
+.sidebar-link:hover, .sidebar-link.active {
+    background: #1e293b;
+    color: #818cf8;
+    border-left: 4px solid #6366f1;
+}
 
-        h2 { text-align: center; }
+/* Main Content Area */
+.main {
+    margin-left: 260px;
+    padding: 40px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.glass-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+}
     </style>
 </head>
 <body>

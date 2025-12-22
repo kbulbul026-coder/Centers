@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>पैरेंटिंग सेल्फ-चेक क्विज़</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #fdfefe; margin: 0; display: flex; }
+        .sidebar { width: 250px; height: 100vh; background: #2c3e50; color: white; position: fixed; padding-top: 20px; }
+        .sidebar a { padding: 15px 25px; text-decoration: none; color: #bdc3c7; display: block; }
+        .main { margin-left: 250px; padding: 40px; width: calc(100% - 250px); }
+        .quiz-container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); max-width: 700px; margin: auto; }
+        .question { margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .option { display: block; margin: 10px 0; cursor: pointer; padding: 10px; border: 1px solid #ddd; border-radius: 8px; transition: 0.3s; }
+        .option:hover { background: #f0f7ff; }
+        .result-box { display: none; margin-top: 30px; padding: 20px; border-radius: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h3 style="text-align: center;">Life Dashboard</h3>
+    <a href="/">🏠 होम (Dashboard)</a>
+    <a href="/parenting-styles">🧠 पैरेंटिंग शैलियाँ</a>
+    <a href="/parenting-quiz" style="color: white; font-weight: bold;">📝 सेल्फ-चेक क्विज़</a>
+</div>
+
+<div class="main">
+    <div class="quiz-container">
+        <h2>🧐 अपनी पैरेंटिंग शैली की जाँच करें</h2>
+        <p>परिस्थिति: आपका बच्चा किसी खिलौने के टूटने पर जोर-जोर से रो रहा है। आप क्या करेंगे?</p>
+
+        <div class="question">
+            <label class="option" onclick="showResult('ignoring')">
+                A) "चुप हो जाओ, यह सिर्फ एक खिलौना है। रोना बंद करो और बाहर जाकर खेलो।"
+            </label>
+            <label class="option" onclick="showResult('permissive')">
+                B) "अरे रो मत! मैं तुम्हें अभी नया खिलौना दिला देता हूँ/चॉकलेट ले लो।"
+            </label>
+            <label class="option" onclick="showResult('dismissive')">
+                C) "अगर तुम चुप नहीं हुए तो मैं तुम्हें कमरे में बंद कर दूँगा!"
+            </label>
+            <label class="option" onclick="showResult('coach')">
+                D) "मुझे पता है तुम दुखी हो, वह तुम्हारा पसंदीदा खिलौना था। क्या हम इसे ठीक कर सकते हैं?"
+            </label>
+        </div>
+
+        <div id="result" class="result-box">
+            <h3 id="result-title"></h3>
+            <p id="result-desc"></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showResult(style) {
+        const res = document.getElementById('result');
+        const title = document.getElementById('result-title');
+        const desc = document.getElementById('result-desc');
+        res.style.display = 'block';
+
+        if(style === 'ignoring') {
+            title.innerText = "🔇 भावनाओं को नज़रअंदाज़ करना";
+            desc.innerText = "आप बच्चे की पीड़ा को कम आंक रहे हैं। इससे बच्चा अपनी भावनाओं को दबाना सीखता है।";
+            res.style.background = "#fff3cd";
+        } else if(style === 'permissive') {
+            title.innerText = "🍭 बहुत अधिक उदार";
+            desc.innerText = "आप रिश्वत का उपयोग कर रहे हैं। इससे बच्चा भावनाओं को 'डील' करना नहीं सीखता, बल्कि 'खरीदना' सीखता है।";
+            res.style.background = "#fff3cd";
+        } else if(style === 'dismissive') {
+            title.innerText = "😠 तिरस्कारपूर्ण / कठोर";
+            desc.innerText = "यह सजा देने वाली शैली है। इससे बच्चा गुस्सा दबाता है जो बाद में विद्रोह के रूप में निकल सकता है।";
+            res.style.background = "#fdedec";
+        } else if(style === 'coach') {
+            title.innerText = "🌟 भावनात्मक कोच (Goal Reached!)";
+            desc.innerText = "बधाई हो! आप बच्चे की भावनाओं को स्वीकार कर रहे हैं और उसे समाधान की ओर ले जा रहे हैं।";
+            res.style.background = "#e8f8f5";
+        }
+    }
+</script>
+
+</body>
+</html>

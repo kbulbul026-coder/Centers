@@ -45,6 +45,14 @@ def mission(): return render_template('mission.html')
 def xyz_formula():
     return render_template('xyz_formula.html')
 
+@app.route('/parenting-styles')
+def parenting_styles():
+    return render_template('parenting_styles.html')
+
+@app.route('/parenting-quiz')
+def parenting_quiz():
+    return render_template('parenting_quiz.html')
+
 
 if __name__ == '__main__':
     app.run(debug=False)
