@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>जीवन का उद्देश्य और सेवा की शक्ति</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Google Fonts (Noto Sans Devanagari for Hindi) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background-color: #F3F4F6; /* Light Gray Background */
+            color: #1F2937; /* Dark Gray Text */
+        }
+
+        /* Chart Container Rules */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* Max width constraint */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px; /* Base height */
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        /* Custom Card Styling */
+        .infographic-card {
+            background-color: white;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-top: 4px solid #1E3A8A; /* Primary Blue Border */
+            transition: transform 0.3s ease;
+        }
+
+        .infographic-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .highlight-text {
+            color: #F59E0B; /* Burning Gold */
+            font-weight: bold;
+        }
+
+        /* Flow Chart Nodes */
+        .flow-node {
+            background-color: #3B82F6;
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            font-weight: bold;
+            position: relative;
+        }
+
+        /* Arrow approximation using CSS borders */
+        .arrow-down {
+            width: 0; 
+            height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #1E3A8A;
+            margin: 0.5rem auto;
+        }
+    </style>
+
+    <!-- 
+    Palette Used: Vibrant Blue & Gold
+    Primary: #1E3A8A (Deep Blue)
+    Secondary: #3B82F6 (Sky Blue)
+    Accent: #F59E0B (Gold/Orange)
+    Source Material Plan:
+    1. Introduction: The concept of anonymous service.
+    2. Data Viz 1: Impact vs Fame (Donut Chart).
+    3. The Science: Selye/Frankl - Purpose leads to health (Bar Chart).
+    4. The Metaphor: Shaw's Torch vs Clod (Radar Chart).
+    5. Conclusion: Service as Rent.
+    -->
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header Section -->
+    <header class="bg-[#1E3A8A] text-white py-12 px-4 shadow-lg text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">जीवन का उद्देश्य और सेवा की शक्ति</h1>
+            <p class="text-xl md:text-2xl text-[#F59E0B] font-medium">"मेरा जीवन पूरे समाज का है... यह एक भव्य मशाल है।"</p>
+            <p class="mt-4 text-gray-200">जॉर्ज बर्नार्ड शॉ, विक्टर फ्रैंकल और डॉ. हंस सेल्ये के विचारों पर आधारित एक दृश्य विश्लेषण।</p>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-12">
+
+        <!-- Section 1: Philosophy of Anonymous Service -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="md:col-span-1">
+                <div class="infographic-card h-full flex flex-col justify-center">
+                    <h2 class="text-2xl font-bold text-[#1E3A8A] mb-4">गुप्त सेवा का प्रभाव</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        सच्ची सेवा वह है जिसके बारे में कोई नहीं जानता। लेखक के अनुसार, हमारा लक्ष्य <span class="highlight-text">प्रसिद्धि (Fame)</span> प्राप्त करना नहीं, बल्कि <span class="highlight-text">प्रभाव (Impact)</span> डालना है। भविष्य में हमारे नाम को कोई जाने या न जाने, यह महत्वपूर्ण नहीं है; महत्वपूर्ण यह है कि हमने दूसरों के जीवन को कितना सुखमय बनाया।
+                    </p>
+                    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-[#F59E0B]">
+                        <p class="italic text-[#1E3A8A] font-semibold">"हमारा उद्देश्य प्रतिष्ठा प्राप्त करना नहीं, बल्कि प्रभाव डालना है।"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:col-span-1">
+                <div class="infographic-card">
+                    <h3 class="text-lg font-semibold text-center mb-2 text-gray-600">जीवन का वास्तविक फोकस</h3>
+                    <div class="chart-container">
+                        <canvas id="impactChart"></canvas>
+                    </div>
+                    <p class="text-sm text-center mt-2 text-gray-500">चार्ट दिखाता है कि एक आदर्श सेवक का 100% ध्यान प्रभाव पर होता है, प्रतिष्ठा पर नहीं।</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Health & Purpose (Frankl & Selye) -->
+        <section>
+            <div class="infographic-card">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="md:col-span-1 pr-4">
+                        <h2 class="text-2xl font-bold text-[#1E3A8A] mb-4">स्वास्थ्य और उद्देश्य का विज्ञान</h2>
+                        <p class="text-gray-700 mb-4">
+                            <strong>विक्टर फ्रैंकल</strong> और <strong>डॉ. हंस सेल्ये</strong> के शोध बताते हैं कि जीवन का अर्थ और स्वास्थ्य गहराई से जुड़े हैं।
+                        </p>
+                        <p class="text-gray-700 mb-4">
+                            डॉ. सेल्ये के अनुसार, एक लंबा, स्वस्थ और सुखी जीवन उन लोगों को मिलता है जो:
+                        </p>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                            <li>सार्थक योजनाओं में भाग लेते हैं।</li>
+                            <li>स्वयं से हटकर दूसरों की मदद करते हैं।</li>
+                            <li>"अपने पड़ोसी का प्रेम अर्जित करते हैं।"</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-2">
+                        <h3 class="text-lg font-semibold text-center mb-2 text-gray-600">तनाव प्रबंधन और जीवन की गुणवत्ता</h3>
+                        <div class="chart-container">
+                            <canvas id="healthChart"></canvas>
+                        </div>
+                        <p class="text-sm text-center mt-2 text-gray-500">तुलनात्मक विश्लेषण: स्व-केंद्रित जीवन बनाम उद्देश्यपूर्ण जीवन के स्वास्थ्य परिणाम।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: The Splendid Torch (George Bernard Shaw) -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="infographic-card">
+                <h2 class="text-2xl font-bold text-[#1E3A8A] mb-4">जॉर्ज बर्नार्ड शॉ का दर्शन</h2>
+                <p class="text-gray-700 mb-6">
+                    शॉ जीवन के दो दृष्टिकोण प्रस्तुत करते हैं। एक है <strong>"स्वार्थी ढेला" (Selfish Clod)</strong>, जो केवल शिकायतों और दुखों का ढेर है। दूसरा है <strong>"भव्य मशाल" (Splendid Torch)</strong>, जो पूरी तरह जलकर समाज को रोशन करती है।
+                </p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center p-3 bg-red-50 rounded-lg">
+                        <div class="text-2xl mr-4">🪨</div>
+                        <div>
+                            <h4 class="font-bold text-red-700">स्वार्थी ढेला (Selfish Clod)</h4>
+                            <p class="text-sm text-gray-600">दुखों का आवेशपूर्ण ढेर, शिकायतें, "दुनिया मुझे खुश नहीं कर रही"।</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center p-3 bg-yellow-50 rounded-lg">
+                        <div class="text-2xl mr-4">🔥</div>
+                        <div>
+                            <h4 class="font-bold text-[#B45309]">भव्य मशाल (Splendid Torch)</h4>
+                            <p class="text-sm text-gray-600">कड़ी मेहनत, जीवन का पूर्ण उपयोग, भावी पीढ़ी के लिए प्रकाश।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="infographic-card">
+                <h3 class="text-lg font-semibold text-center mb-2 text-gray-600">व्यक्तित्व विश्लेषण: ढेला बनाम मशाल</h3>
+                <div class="chart-container">
+                    <canvas id="torchRadarChart"></canvas>
+                </div>
+                <p class="text-sm text-center mt-2 text-gray-500">यह रडार चार्ट दोनों व्यक्तित्वों के गुणों (जैसे खुशी, ऊर्जा, शिकायतें) की तुलना करता है।</p>
+            </div>
+        </section>
+
+        <!-- Section 4: Service as Rent (Tanner) -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-[#1E3A8A] text-center mb-8">"सेवा वह किराया है..."</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                
+                <!-- Concept 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#3B82F6]">
+                    <div class="text-4xl mb-4 text-[#3B82F6]">🌍</div>
+                    <h3 class="text-xl font-bold mb-2">जीवन का सौभाग्य</h3>
+                    <p class="text-gray-600">
+                        एन. एल्डन टैनर के अनुसार, इस धरती पर जीने का सौभाग्य मुफ्त नहीं है। हमें इसके बदले कुछ देना होगा।
+                    </p>
+                </div>
+
+                <!-- Concept 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#F59E0B]">
+                    <div class="text-4xl mb-4 text-[#F59E0B]">🤝</div>
+                    <h3 class="text-xl font-bold mb-2">किराया भुगतान</h3>
+                    <p class="text-gray-600">
+                        सेवा वह 'किराया' है जो हम चुकाते हैं। यह कोई बोझ नहीं, बल्कि एक नैतिक जिम्मेदारी और विशेषाधिकार है।
+                    </p>
+                </div>
+
+                <!-- Concept 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-[#1E3A8A]">
+                    <div class="text-4xl mb-4 text-[#1E3A8A]">❤️</div>
+                    <h3 class="text-xl font-bold mb-2">बिना शर्त प्रेम</h3>
+                    <p class="text-gray-600">
+                        संस्थाओं की सदस्यता जरुरी नहीं। हर दिन "बिना शर्त प्रेम" जमा करके हम सेवा का किराया चुका सकते हैं।
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Flow Diagram Section (HTML/CSS) -->
+        <section class="max-w-2xl mx-auto mb-16">
+            <h3 class="text-xl font-bold text-center text-gray-700 mb-6">सार्थक जीवन का चक्र</h3>
+            <div class="flex flex-col items-center">
+                <div class="flow-node bg-[#1E3A8A] w-64">शक्तिशाली उद्देश्य (Purpose)</div>
+                <div class="arrow-down"></div>
+                <div class="flow-node bg-[#3B82F6] w-64">दूसरों की सेवा (Contribution)</div>
+                <div class="arrow-down"></div>
+                <div class="flow-node bg-[#F59E0B] text-black w-64">आत्म-संतुष्टि और स्वास्थ्य (Satisfaction & Health)</div>
+                <div class="arrow-down"></div>
+                <div class="flow-node bg-[#10B981] w-64">समाज पर प्रभाव (Impact)</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <p class="text-lg mb-2">"मैं चाहता हूँ कि मेरी मृत्यु तक मेरा पूरा उपयोग हो।"</p>
+        <p class="text-sm text-gray-400">स्रोत सामग्री पर आधारित इन्फोग्राफिक</p>
+    </footer>
+
+    <script>
+        // --- UTILITY FUNCTIONS ---
+
+        // Function to wrap labels longer than 16 characters
+        function wrapLabel(label) {
+            if (typeof label !== 'string' || label.length <= 16) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + ' ' + words[i]).length <= 16) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // Process array of labels
+        function processLabels(labels) {
+            return labels.map(label => wrapLabel(label));
+        }
+
+        // Common Chart Options
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    },
+                    backgroundColor: 'rgba(30, 58, 138, 0.9)', // Dark Blue tooltip
+                    titleFont: { size: 14 },
+                    bodyFont: { size: 13 },
+                    padding: 10,
+                    cornerRadius: 6,
+                },
+                legend: {
+                    labels: {
+                        font: {
+                            family: "'Noto Sans Devanagari', sans-serif",
+                            size: 12
+                        },
+                        color: '#374151'
+                    }
+                }
+            }
+        };
+
+        // --- CHART 1: IMPACT VS FAME (Doughnut) ---
+        const ctxImpact = document.getElementById('impactChart').getContext('2d');
+        const impactLabels = ['दूसरों पर प्रभाव (Impact)', 'व्यक्तिगत प्रतिष्ठा (Prestige)'];
+        
+        new Chart(ctxImpact, {
+            type: 'doughnut',
+            data: {
+                labels: processLabels(impactLabels),
+                datasets: [{
+                    data: [100, 0], // Conceptual data based on "Our goal is impact, not prestige"
+                    backgroundColor: ['#F59E0B', '#E5E7EB'], // Gold vs Gray
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                ...commonOptions,
+                cutout: '70%',
+                plugins: {
+                    ...commonOptions.plugins,
+                    legend: { position: 'bottom' },
+                    tooltip: {
+                        ...commonOptions.plugins.tooltip,
+                        callbacks: {
+                            ...commonOptions.plugins.tooltip.callbacks,
+                            label: function(context) {
+                                return context.raw + '% फोकस';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // --- CHART 2: HEALTH & PURPOSE (Bar Chart) ---
+        const ctxHealth = document.getElementById('healthChart').getContext('2d');
+        const healthLabels = ['तनाव स्तर (Stress)', 'जीवन संतुष्टि (Satisfaction)', 'दीर्घायु (Longevity)'];
+        
+        new Chart(ctxHealth, {
+            type: 'bar',
+            data: {
+                labels: processLabels(healthLabels),
+                datasets: [
+                    {
+                        label: 'उद्देश्यपूर्ण जीवन (Purposeful Life)',
+                        data: [20, 95, 90], // High satisfaction/longevity, low stress
+                        backgroundColor: '#1E3A8A', // Deep Blue
+                        borderRadius: 6
+                    },
+                    {
+                        label: 'स्व-केंद्रित जीवन (Self-Centered Life)',
+                        data: [85, 30, 50], // High stress, low satisfaction
+                        backgroundColor: '#9CA3AF', // Gray
+                        borderRadius: 6
+                    }
+                ]
+            },
+            options: {
+                ...commonOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'गुणवत्ता स्कोर (0-100)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // --- CHART 3: TORCH VS CLOD (Radar Chart) ---
+        const ctxRadar = document.getElementById('torchRadarChart').getContext('2d');
+        const radarLabels = ['कड़ी मेहनत (Hard Work)', 'खुशी (Happiness)', 'शिकायतें (Complaints)', 'जीवन शक्ति (Vitality)', 'उपयोगिता (Utility)'];
+
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: processLabels(radarLabels),
+                datasets: [{
+                    label: 'भव्य मशाल (The Torch)',
+                    data: [95, 100, 5, 100, 100],
+                    fill: true,
+                    backgroundColor: 'rgba(245, 158, 11, 0.2)', // Gold transparent
+                    borderColor: '#F59E0B',
+                    pointBackgroundColor: '#F59E0B',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#F59E0B'
+                }, {
+                    label: 'स्वार्थी ढेला (The Clod)',
+                    data: [20, 10, 95, 30, 10],
+                    fill: true,
+                    backgroundColor: 'rgba(107, 114, 128, 0.2)', // Gray transparent
+                    borderColor: '#6B7280',
+                    pointBackgroundColor: '#6B7280',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#6B7280'
+                }]
+            },
+            options: {
+                ...commonOptions,
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: '#E5E7EB'
+                        },
+                        grid: {
+                            color: '#E5E7EB'
+                        },
+                        pointLabels: {
+                            font: {
+                                size: 12,
+                                family: "'Noto Sans Devanagari', sans-serif"
+                            },
+                            color: '#1F2937'
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

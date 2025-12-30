@@ -73,6 +73,9 @@ def self_acceptance():
 def reading_list():
     return render_template('reading_list.html')
 
+@app.route('/purpose')
+def purpose():
+    return render_template('life_purpose.html')
 
 
 if __name__ == '__main__':
