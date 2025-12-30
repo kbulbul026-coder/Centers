@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>नॉलेज वॉल्ट | 21 किताबें</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-blue: #2c3e50;
+            --accent-blue: #3498db;
+            --bg-gray: #f8f9fa;
+        }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg-gray); margin: 0; padding: 40px; color: #333; }
+        .container { max-width: 1100px; margin: auto; }
+        
+        /* Header & Stats */
+        .header { text-align: center; margin-bottom: 40px; }
+        .stats-badge { background: var(--gold); color: white; padding: 10px 25px; border-radius: 30px; font-weight: bold; box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3); }
+
+        /* Book Grid Layout */
+        .book-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+        .book-card { 
+            background: white; padding: 20px; border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--accent-blue);
+            transition: 0.3s; height: 100px; display: flex; flex-direction: column; justify-content: center;
+        }
+        .book-card:hover { transform: translateY(-5px); border-left-color: var(--gold); }
+        .book-card h4 { margin: 0; font-size: 1rem; color: var(--dark-blue); }
+        .book-card p { font-size: 0.8em; color: #7f8c8d; margin-top: 5px; }
+
+        /* Special Cards (20 & 21) */
+        .special-card { 
+            grid-column: 1 / -1; background: white; padding: 30px; 
+            border-radius: 15px; margin-top: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .eq-card { border-top: 8px solid #8e44ad; }
+        .covey-card { background: var(--dark-blue); color: white; border-left: 10px solid var(--gold); }
+
+        /* Habit Tags */
+        .habit-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .habit-tag { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); padding: 8px 15px; border-radius: 8px; font-size: 0.9em; }
+
+        .btn-back { display: block; text-align: center; margin-top: 50px; text-decoration: none; color: var(--accent-blue); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>📚 मेरा नॉलेज वॉल्ट (Knowledge Vault)</h1>
+        <span class="stats-badge">🎯 21 महान पुस्तकें पूरी हुईं</span>
+    </div>
+
+    <div class="book-grid">
+        <div class="book-card"><h4>1. Rich Dad Poor Dad</h4><p>रॉबर्ट कियोसाकी</p></div>
+        <div class="book-card"><h4>2. Cashflow Quadrant</h4><p>रॉबर्ट कियोसाकी</p></div>
+        <div class="book-card"><h4>3. Millionaire Fastlane</h4><p>एमजे डीमार्को</p></div>
+        <div class="book-card"><h4>4. Richest Man in Babylon</h4><p>जॉर्ज एस. क्लैसन</p></div>
+        <div class="book-card"><h4>5. Psychology of Money</h4><p>मॉर्गन हाउससेल</p></div>
+        <div class="book-card"><h4>6. Think and Grow Rich</h4><p>नेपोलियन हिल</p></div>
+        <div class="book-card"><h4>7. The Secret</h4><p>रोंडा बर्न</p></div>
+        <div class="book-card"><h4>8. Ikigai</h4><p>जापानी रहस्य</p></div>
+        <div class="book-card"><h4>9. The Alchemist</h4><p>पाउलो कोएल्हो</p></div>
+        <div class="book-card"><h4>10. How to Win Friends</h4><p>डेल कार्नेगी</p></div>
+        <div class="book-card"><h4>11. Siddhartha</h4><p>हर्मन हेस</p></div>
+        <div class="book-card"><h4>12. Monk Who Sold His Ferrari</h4><p>रॉबिन शर्मा</p></div>
+        <div class="book-card"><h4>13. The 5 AM Club</h4><p>रॉबिन शर्मा</p></div>
+        <div class="book-card"><h4>14. Zero to One</h4><p>पीटर थिएल</p></div>
+        <div class="book-card"><h4>15. Sapiens</h4><p>युवल नोआ हरारी</p></div>
+        <div class="book-card"><h4>16. The Power of Now</h4><p>एकहार्ट टोले</p></div>
+        <div class="book-card"><h4>17. Atomic Habits</h4><p>जेम्स क्लियर</p></div>
+        <div class="book-card"><h4>18. Subconscious Mind</h4><p>जोसेफ मर्फी</p></div>
+        <div class="book-card"><h4>19. Man's Search for Meaning</h4><p>विक्टर फ्रैंकल</p></div>
+
+        <div class="special-card eq-card">
+            <h3 style="color: #8e44ad; margin-top: 0;">🧠 20. Emotional Intelligence – Daniel Goleman</h3>
+            <p>यह आपके 'Self-Science' का आधार है। आपने सीखा: आत्म-जागरूकता, आत्म-नियमन, प्रेरणा, सहानुभूति और सामाजिक कौशल।</p>
+        </div>
+
+        <div class="special-card covey-card">
+            <h2 style="margin-top: 0; color: var(--gold);">💎 21. 7 Habits of Highly Effective People – Stephen Covey</h2>
+            <p>यह आपके पूरे लाइफ डैशबोर्ड का "ऑपरेटिंग सिस्टम" है। इसने आपको 'निर्भरता' से 'स्वतंत्रता' और फिर 'परस्पर निर्भरता' की ओर बढ़ना सिखाया।</p>
+            <div class="habit-container">
+                <div class="habit-tag">1. प्रोएक्टिव बनें</div>
+                <div class="habit-tag">2. अंत को ध्यान में रखकर शुरू करें</div>
+                <div class="habit-tag">3. पहले ज़रूरी काम पहले</div>
+                <div class="habit-tag">4. जीत-जीत सोचें</div>
+                <div class="habit-tag">5. पहले समझें, फिर समझे जाएं</div>
+                <div class="habit-tag">6. तालमेल (Synergy)</div>
+                <div class="habit-tag">7. आरी तेज़ करें</div>
+            </div>
+        </div>
+    </div>
+
+    <a href="/" class="btn-back">← डैशबोर्ड पर वापस जाएं</a>
+</div>
+
+</body>
+</html>

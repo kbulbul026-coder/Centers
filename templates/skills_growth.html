@@ -2,81 +2,106 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>SEL विकास ढांचा</title>
+    <title>आरी को तेज करना - संतुलित नवीनीकरण</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; display: flex; background: #f4f4f4; }
+        :root {
+            --physical: #e74c3c;
+            --mental: #3498db;
+            --social: #f1c40f;
+            --spiritual: #9b59b6;
+            --bg: #f8fafc;
+            --card: #ffffff;
+        }
+
+        body { font-family: 'Inter', sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #1e293b; }
+        .container { max-width: 1100px; margin: auto; }
         
-        /* Sidebar Styles */
-        .sidebar { width: 250px; height: 100vh; background: #2c3e50; color: white; position: fixed; padding-top: 20px; }
-        .sidebar a { padding: 15px 25px; text-decoration: none; color: #bdc3c7; display: block; transition: 0.3s; }
-        .sidebar a:hover, .sidebar a.active { background: #34495e; color: white; border-left: 5px solid #8e44ad; }
+        .header { text-align: center; padding: 40px; background: white; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 30px; }
         
-        /* Main Content */
-        .main { margin-left: 250px; padding: 40px; width: calc(100% - 250px); }
-        .table-container { overflow: auto; max-height: 70vh; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        table { border-collapse: separate; border-spacing: 0; width: 100%; background: white; }
-        th, td { padding: 18px; border: 1px solid #eee; min-width: 250px; vertical-align: top; }
+        .dimensions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
         
-        thead th { position: sticky; top: 0; background: #8e44ad; color: white; z-index: 10; }
-        .sticky-col { position: sticky; left: 0; background: #fdfaff; font-weight: bold; z-index: 5; border-right: 2px solid #8e44ad; }
-        
-        .stoplight-box { background: #fff3cd; border-left: 5px solid #ffc107; padding: 10px; margin-top: 10px; font-size: 0.9em; }
+        .dim-card { background: var(--card); padding: 25px; border-radius: 15px; border-top: 6px solid; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .dim-card.phy { border-color: var(--physical); }
+        .dim-card.men { border-color: var(--mental); }
+        .dim-card.soc { border-color: var(--social); }
+        .dim-card.spi { border-color: var(--spiritual); }
+
+        .warning-box { background: #fff5f5; border: 1px solid #feb2b2; padding: 20px; border-radius: 12px; margin-top: 30px; }
+        .warning-box h3 { color: #c53030; margin-top: 0; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 25px; background: white; border-radius: 12px; overflow: hidden; }
+        th, td { padding: 15px; border: 1px solid #e2e8f0; text-align: left; }
+        th { background: #f1f5f9; }
+
+        .btn-back { display: inline-block; margin-top: 30px; text-decoration: none; color: #6366f1; font-weight: bold; }
     </style>
 </head>
 <body>
 
-<div class="sidebar">
-    <h3 style="text-align: center;">Life Dashboard</h3>
-    <a href="/">🧭 जीवन के केंद्र</a>
-    <a href="/perspective">🔍 नजरिया (Perspectives)</a>
-    <a href="/skills" class="active">🎓 कौशल विकास (SEL)</a>
-    <a href="/mission">📝 मिशन वक्तव्य</a>
-</div>
-
-<div class="main">
-    <h2 style="color: #2c3e50;">🎓 सामाजिक-भावनात्मक कौशल (SEL) विकास</h2>
-    <p>यह ढांचा बच्चों को भावनात्मक और सामाजिक रूप से परिपक्व बनाने में मदद करता है।</p>
-    
-    
-
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th class="sticky-col">ग्रेड स्तर</th>
-                    <th>प्रमुख गतिविधियाँ</th>
-                    <th>उद्देश्य और लाभ</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="sticky-col">पहली कक्षा</td>
-                    <td><strong>"फीलिंग्स क्यूब":</strong> भावनाओं का वर्णन करना।</td>
-                    <td>भावनाओं को शब्दों से जोड़ना। दूसरों को सुनकर <strong>सहानुभूति (Empathy)</strong> बढ़ाना।</td>
-                </tr>
-                <tr>
-                    <td class="sticky-col">चौथी और पाँचवीं</td>
-                    <td>आवेग नियंत्रण और क्रोध प्रबंधन। चेहरे के हाव-भाव पढ़ना।</td>
-                    <td>
-                        <strong>"स्टॉपलाइट" (Stoplight) मॉडल:</strong> कार्य करने से पहले सोचने में मदद।
-                        <div class="stoplight-box">
-                            🚥 यह भावनात्मक क्षणों में प्रतिक्रिया देने के बजाय मापा हुआ तरीका प्रदान करता है।
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="sticky-col">छठी कक्षा</td>
-                    <td>सेक्स, ड्रग्स और शराब के दबावों से निपटना।</td>
-                    <td>किशोरावस्था के जोखिमों के लिए मानसिक तैयारी और मजबूती।</td>
-                </tr>
-                <tr>
-                    <td class="sticky-col">नौवीं कक्षा</td>
-                    <td><strong>बहु-दृष्टिकोण (Multiple Perspectives):</strong> दूसरों के पक्ष को समझना।</td>
-                    <td>टकराव (Conflict) के बजाय समाधान खोजना। जटिल सामाजिक स्थितियों को संभालना।</td>
-                </tr>
-            </tbody>
-        </table>
+<div class="container">
+    <div class="header">
+        <h1>🪚 आरी को तेज करना (Sharpen the Saw)</h1>
+        <p>"नवीनीकरण वह प्रक्रिया है जो हमें हमारे चारों आयामों में बढ़ने की शक्ति देती है।"</p>
     </div>
+
+    <div class="dimensions-grid">
+        <div class="dim-card phy">
+            <h3>🍎 शारीरिक</h3>
+            <p><strong>व्यक्तिगत:</strong> व्यायाम, पोषण, तनाव प्रबंधन।<br><strong>संगठन:</strong> आर्थिक लाभ, बजट, संपत्तियां।</p>
+        </div>
+        <div class="dim-card men">
+            <h3>📖 मानसिक</h3>
+            <p><strong>व्यक्तिगत:</strong> पढ़ना, लिखना, योजना बनाना।<br><strong>संगठन:</strong> प्रशिक्षण, प्रतिभा विकास।</p>
+        </div>
+        <div class="dim-card soc">
+            <h3>🤝 सामाजिक</h3>
+            <p><strong>व्यक्तिगत:</strong> सेवा, सहानुभूति, तालमेल।<br><strong>संगठन:</strong> कार्य संस्कृति, मानवीय संबंध।</p>
+        </div>
+        <div class="dim-card spi">
+            <h3>🕯️ आध्यात्मिक</h3>
+            <p><strong>व्यक्तिगत:</strong> मूल्य, ध्यान, मिशन।<br><strong>संगठन:</strong> अखंडता, उद्देश्य, सेवा भाव।</p>
+        </div>
+    </div>
+
+    <div class="warning-box">
+        <h3>⚠️ असंतुलन का खतरा (The Danger of Imbalance)</h3>
+        <p>जब एक संगठन केवल <strong>आर्थिक (Physical)</strong> लाभ पर ध्यान देता है, तो वह 'लालच' की संस्कृति पैदा करता है। यदि वह केवल <strong>सामाजिक</strong> आयाम पर टिका है, तो वह अपनी प्रभावशीलता खो देता है। सच्ची सफलता <strong>सिनर्जी (Synergy)</strong> में है—जब चारों आयाम एक-दूसरे को शक्ति देते हैं।</p>
+    </div>
+
+    <h3>📊 नवीनीकरण तुलनात्मक विश्लेषण</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>आयाम</th>
+                <th>उपेक्षा का परिणाम</th>
+                <th>संतुलन का लाभ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>शारीरिक / आर्थिक</td>
+                <td>दिवालियापन / बीमारी</td>
+                <td>दीर्घकालिक स्थिरता</td>
+            </tr>
+            <tr>
+                <td>मानसिक / प्रतिभा</td>
+                <td>बौद्धिक ठहराव (Brain Drain)</td>
+                <td>निरंतर नवाचार (Innovation)</td>
+            </tr>
+            <tr>
+                <td>सामाजिक / संस्कृति</td>
+                <td>नकारात्मक ऊर्जा / संघर्ष</td>
+                <td>सहयोग और विश्वास</td>
+            </tr>
+            <tr>
+                <td>आध्यात्मिक / मूल्य</td>
+                <td>अनैतिकता / दिशाहीनता</td>
+                <td>स्पष्ट उद्देश्य और शांति</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/" class="btn-back">← मुख्य डैशबोर्ड पर लौटें</a>
 </div>
 
 </body>

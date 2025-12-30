@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>SEL विकास ढांचा</title>
+    <style>
+        :root {
+            --primary: #8e44ad;
+            --secondary: #2c3e50;
+            --bg: #f8fafc;
+            --card: #ffffff;
+        }
+
+        body { font-family: 'Inter', system-ui, sans-serif; margin: 0; display: flex; background: var(--bg); }
+        
+        /* Sidebar Styles */
+        .sidebar { width: 250px; height: 100vh; background: var(--secondary); color: white; position: fixed; padding-top: 20px; }
+        .sidebar a { padding: 15px 25px; text-decoration: none; color: #bdc3c7; display: block; transition: 0.3s; }
+        .sidebar a:hover, .sidebar a.active { background: #34495e; color: white; border-left: 5px solid var(--primary); }
+        
+        /* Main Content */
+        .main { margin-left: 250px; padding: 40px; width: calc(100% - 250px); color: #1e293b; }
+        
+        .header-section { background: white; padding: 30px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 30px; }
+        
+        .table-container { border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; background: white; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { padding: 20px; border: 1px solid #e2e8f0; vertical-align: top; }
+        
+        thead th { background: var(--primary); color: white; text-align: left; font-size: 1.1rem; }
+        .grade-col { font-weight: bold; color: var(--primary); background: #fdfaff; width: 150px; }
+        
+        .activity-badge { background: #f3e5f5; color: #6a1b9a; padding: 4px 10px; border-radius: 6px; font-size: 0.85em; font-weight: bold; margin-bottom: 8px; display: inline-block; }
+        
+        .stoplight-box { background: #fffbeb; border-left: 5px solid #f59e0b; padding: 15px; border-radius: 8px; margin-top: 10px; }
+        .synergy-text { color: #059669; font-weight: 600; font-size: 0.9em; margin-top: 8px; display: block; }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h3 style="text-align: center; color: white;">Life Dashboard</h3>
+    <a href="/centers-matrix">🧭 जीवन के केंद्र</a>
+    <a href="/perspective">🔍 नजरिया (Perspective)</a>
+    <a href="/skills" class="active">🎓 कौशल विकास (SEL)</a>
+    <a href="/stoplight">🚦 स्टॉपलाइट मॉडल</a>
+    <a href="/mission">📝 मिशन वक्तव्य</a>
+</div>
+
+<div class="main">
+    <div class="header-section">
+        <h1 style="margin: 0; color: var(--secondary);">🎓 सामाजिक-भावनात्मक कौशल (SEL)</h1>
+        <p style="color: #64748b; margin-top: 10px;">यह ढांचा बच्चों को भावनात्मक जटिलताओं को समझने और 'Win/Win' समाधान खोजने के लिए तैयार करता है।</p>
+    </div>
+
+    
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ग्रेड स्तर</th>
+                    <th>प्रमुख गतिविधियाँ</th>
+                    <th>उद्देश्य और 'आरी तेज करना' प्रभाव</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="grade-col">पहली कक्षा</td>
+                    <td><span class="activity-badge">Feeling Cube</span><br>भावनाओं का वर्णन करना।</td>
+                    <td><strong>भावनात्मक साक्षरता:</strong> भावनाओं को नाम देना उन्हें नियंत्रित करने का पहला कदम है। <span class="synergy-text">→ मानसिक नवीनीकरण की शुरुआत।</span></td>
+                </tr>
+                <tr>
+                    <td class="grade-col">4थी - 5वीं</td>
+                    <td><span class="activity-badge">Impulse Control</span><br>चेहरे के हाव-भाव और क्रोध प्रबंधन।</td>
+                    <td>
+                        <strong>"स्टॉपलाइट" मॉडल का अभ्यास:</strong>
+                        <div class="stoplight-box">
+                            🛑 रुकें | 🟡 सोचें | 🟢 आगे बढ़ें<br>
+                            <small>यह 'आवेग' और 'प्रतिक्रिया' के बीच के स्थान को बढ़ाता है।</small>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="grade-col">छठी कक्षा</td>
+                    <td><span class="activity-badge">Resilience</span><br>दबावों और प्रलोभनों से निपटना।</td>
+                    <td><strong>सामाजिक सुदृढ़ीकरण:</strong> 'ना' कहने की शक्ति और अपने मूल्यों (Principles) पर टिके रहना।</td>
+                </tr>
+                <tr>
+                    <td class="grade-col">नौवीं कक्षा</td>
+                    <td><span class="activity-badge">Multi-Perspective</span><br>सहानुभूति और जटिल संवाद।</td>
+                    <td>
+                        <strong>Win/Win का आधार:</strong> दूसरों के दृष्टिकोण को समझना। 
+                        <span class="synergy-text">→ सामाजिक/भावनात्मक सिनर्जी का निर्माण।</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

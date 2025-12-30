@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sharpen the Saw - नवीनीकरण</title>
+    <style>
+        :root { --saw-orange: #e67e22; --bg: #fffbf5; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); margin: 0; display: flex; }
+        .sidebar { width: 250px; height: 100vh; background: #2c3e50; color: white; position: fixed; padding-top: 20px; }
+        .sidebar a { padding: 15px 25px; text-decoration: none; color: #bdc3c7; display: block; }
+        .main { margin-left: 250px; padding: 40px; width: calc(100% - 250px); }
+        
+        .header-card { background: var(--saw-orange); color: white; padding: 30px; border-radius: 15px; text-align: center; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; }
+        .dimension-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 5px solid var(--saw-orange); }
+        
+        table { width: 100%; border-collapse: collapse; background: white; margin-top: 30px; border-radius: 12px; overflow: hidden; }
+        th, td { padding: 15px; border: 1px solid #eee; text-align: left; }
+        th { background: #fdf2e9; color: #d35400; }
+        .highlight { font-weight: bold; color: var(--saw-orange); }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h3 style="text-align: center;">Life Dashboard</h3>
+    <a href="/">🏠 होम (Dashboard)</a>
+    <a href="/sharpen-the-saw" style="color: white; font-weight: bold;">🪚 आरी तेज करना</a>
+    <a href="/kaizen-steps">📈 काइज़न स्टेप्स</a>
+    <a href="/ppc-balance">⚖️ P/PC संतुलन</a>
+</div>
+
+<div class="main">
+    <div class="header-card">
+        <h1>🪚 आरी को तेज करना (Sharpen the Saw)</h1>
+        <p>"नवीनीकरण वह शक्ति है जो हमें आगे बढ़ने के लिए ऊर्जा देती है।"</p>
+    </div>
+
+    <div class="grid">
+        <div class="dimension-card">
+            <h3>🏃 शारीरिक (Physical)</h3>
+            <p>व्यायाम, पोषण और तनाव प्रबंधन। यह आपकी 'PC' (क्षमता) को शारीरिक रूप से बढ़ाता है।</p>
+        </div>
+        <div class="dimension-card">
+            <h3>📖 मानसिक (Mental)</h3>
+            <p>पढ़ना, लिखना और योजना बनाना। यह आपके दिमाग को तेज और फोकस्ड रखता है।</p>
+        </div>
+        <div class="dimension-card">
+            <h3>❤️ सामाजिक/भावनात्मक</h3>
+            <p>सेवा, सहानुभूति और सिनर्जी। यह आपके रिश्तों में भावनात्मक बैंक खाते (EBA) को भरता।</p>
+        </div>
+        <div class="dimension-card">
+            <h3>🧘 आध्यात्मिक (Spiritual)</h3>
+            <p>मूल्य स्पष्टता, ध्यान और अध्ययन। यह आपकी आंतरिक अखंडता को मजबूत करता है।</p>
+        </div>
+    </div>
+
+    <h3>📊 नवीनीकरण का तुलनात्मक विश्लेषण</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>आयाम (Dimension)</th>
+                <th>व्यक्तिगत स्तर पर</th>
+                <th>संगठनात्मक स्तर पर</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="highlight">शारीरिक</td>
+                <td>स्वास्थ्य, व्यायाम, नींद</td>
+                <td>आर्थिक स्थिति, लाभ, बजट</td>
+            </tr>
+            <tr>
+                <td class="highlight">मानसिक</td>
+                <td>सीखना, पढ़ना, नया कौशल</td>
+                <td>प्रतिभा की पहचान और प्रशिक्षण</td>
+            </tr>
+            <tr>
+                <td class="highlight">सामाजिक</td>
+                <td>रिश्ते, सेवा, सहानुभूति</td>
+                <td>कार्य संस्कृति, मानवीय संबंध</td>
+            </tr>
+            <tr>
+                <td class="highlight">आध्यात्मिक</td>
+                <td>मूल्य, ध्यान, उद्देश्य</td>
+                <td>मिशन, अखंडता और सेवा भाव</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 40px; text-align: center; font-style: italic; color: #7f8c8d;">
+        "यदि आप आरी तेज करने के लिए समय नहीं निकालते, तो आप काटने में बहुत अधिक समय और ऊर्जा बर्बाद करेंगे।"
+    </div>
+</div>
+
+</body>
+</html>

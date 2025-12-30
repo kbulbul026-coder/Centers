@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>सेल्फ साइंस मास्टर करिकुलम</title>
+    <style>
+        :root {
+            --self-science-purple: #8e44ad;
+            --self-love: #ff7675;
+            --bg-soft: #f4f7f6;
+            --text-dark: #2c3e50;
+        }
+        body { font-family: 'Segoe UI', 'Inter', sans-serif; background: var(--bg-soft); color: var(--text-dark); margin: 0; display: flex; }
+
+        .sidebar { width: 260px; height: 100vh; background: var(--text-dark); color: white; position: fixed; padding-top: 20px; overflow-y: auto; }
+        .sidebar h3 { text-align: center; border-bottom: 1px solid #444; padding-bottom: 15px; }
+        .sidebar a { padding: 12px 25px; text-decoration: none; color: #bdc3c7; display: block; font-size: 0.9em; transition: 0.3s; }
+        .sidebar a:hover { background: #34495e; color: white; border-left: 4px solid var(--self-science-purple); }
+
+        .main-content { margin-left: 260px; padding: 40px; width: calc(100% - 260px); }
+
+        .hero-banner { background: var(--self-science-purple); color: white; padding: 40px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 10px 20px rgba(142, 68, 173, 0.2); }
+
+        /* Reframing Table Section */
+        .reframe-section { background: white; padding: 30px; border-radius: 15px; margin-bottom: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .comparison-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .comparison-table th, .comparison-table td { padding: 15px; border: 1px solid #fab1a0; text-align: left; }
+        .comparison-table th { background: #ffeaa7; color: #d35400; }
+        .negative { color: #d63031; font-style: italic; font-weight: bold; }
+        .positive { color: #00b894; font-weight: bold; }
+
+        /* Curriculum Grid */
+        .curriculum-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .skill-card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-top: 5px solid var(--self-science-purple); }
+        .skill-card h3 { margin-top: 0; color: var(--self-science-purple); border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        
+        .connection-box { background: #fff3cd; padding: 12px; border-radius: 8px; margin-top: 15px; font-size: 0.85em; border-left: 4px solid #f1c40f; }
+        .laugh-box { background: #e3f2fd; border-left: 5px solid #2196f3; padding: 15px; border-radius: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h3>Self-Science</h3>
+    <a href="#acceptance">💖 आत्म-स्वीकृति</a>
+    <a href="#awareness">👁️ आत्म-जागरूकता</a>
+    <a href="#decisions">🎯 व्यक्तिगत निर्णय</a>
+    <a href="#feelings">🎢 भावनाओं का प्रबंधन</a>
+    <a href="#stress">🧘 तनाव प्रबंधन</a>
+    <a href="#empathy">🤝 सहानुभूति (Empathy)</a>
+    <a href="#comm">💬 संचार</a>
+    <a href="#conflict">⚔️ संघर्ष समाधान</a>
+    <a href="/">🏠 वापस डैशबोर्ड</a>
+</div>
+
+<div class="main-content">
+    <div class="hero-banner">
+        <h1>🎓 सेल्फ साइंस करिकुलम (The Self-Science)</h1>
+        <p>यह आपके 'भावनात्मक और सामाजिक बुद्धिमत्ता' (EQ) को विकसित करने का संपूर्ण रोडमैप है।</p>
+    </div>
+
+    <div id="acceptance" class="reframe-section">
+        <h2 style="color: var(--self-love);">💖 आत्म-स्वीकृति और नकारात्मक स्व-वार्ता</h2>
+        <p>"मैं अभी जैसा हूँ, वैसा पर्याप्त हूँ — सुधार की गुंजाइश के साथ।"</p>
+        
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>नकारात्मक स्व-वार्ता (आलोचक)</th>
+                    <th>आत्म-स्वीकृति कथन (मित्र)</th>
+                    <th>विश्लेषण</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="negative">"मैं हमेशा चीज़ें गड़बड़ कर देता हूँ।"</td>
+                    <td class="positive">"मैंने गड़बड़ी की है पर मुझे समझ विकसित हुई।"</td>
+                    <td>दोष के बजाय सीखने पर ध्यान।</td>
+                </tr>
+                <tr>
+                    <td class="negative">"मैं कितना मूर्ख हूँ।"</td>
+                    <td class="positive">"गलती करके सीखा हूँ, मेरा विकास हुआ है!"</td>
+                    <td>स्वयं पर हँसने की स्वस्थ क्षमता।</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="laugh-box">
+            <strong>😂 स्वयं पर हँसना:</strong> जब हम अपनी गलतियों को हास्य के साथ देखते हैं, तो हम अपनी पहचान को अपनी त्रुटियों से अलग कर लेते हैं।
+        </div>
+    </div>
+
+    <div class="curriculum-grid">
+        <div class="skill-card" id="awareness">
+            <h3>👁️ आत्म-जागरूकता</h3>
+            <p>स्वयं का अवलोकन और भावनाओं को पहचानना। विचारों, भावनाओं और प्रतिक्रियाओं के बीच के संबंध को जानना।</p>
+            <div class="connection-box"><strong>लिंक:</strong> यह आपके 'स्टॉपलाइट मॉडल' की पहली सीढ़ी है।</div>
+        </div>
+
+        <div class="skill-card" id="decisions">
+            <h3>🎯 व्यक्तिगत निर्णय</h3>
+            <p>अपने कार्यों के परिणामों को समझना। यह महसूस करना कि निर्णय लेने में विचार और भावनाएँ दोनों भूमिका निभाते हैं।</p>
+            <div class="connection-box"><strong>लिंक:</strong> यह 'मिशन वक्तव्य' के साथ तालमेल बिठाने में मदद करता है।</div>
+        </div>
+
+        <div class="skill-card" id="feelings">
+            <h3>🎢 भावनाओं का प्रबंधन</h3>
+            <p>अपने भीतर की भावनाओं (गुस्सा, डर, खुशी) को नियंत्रित करना और उन्हें स्वस्थ तरीके से व्यक्त करना।</p>
+            <div class="connection-box"><strong>अभ्यास:</strong> XYZ फॉर्मूला का उपयोग करें।</div>
+        </div>
+
+        <div class="skill-card" id="stress">
+            <h3>🧘 तनाव प्रबंधन</h3>
+            <p>चुनौतीपूर्ण स्थितियों में शांत रहने के तरीके सीखना (जैसे गहरी सांस लेना या मौन)।</p>
+            <div class="connection-box"><strong>लिंक:</strong> 'आरी तेज करना' का आध्यात्मिक आयाम।</div>
+        </div>
+
+        <div class="skill-card" id="comm">
+            <h3>💬 संचार (Communications)</h3>
+            <p>अपनी बात को स्पष्टता से कहना और दूसरों को सक्रिय रूप से सुनना।</p>
+            <div class="connection-box"><strong>लिंक:</strong> "पहले समझने की कोशिश करें, फिर समझे जाने की।"</div>
+        </div>
+
+        <div class="skill-card" id="empathy">
+            <h3>🤝 सहानुभूति (Empathy)</h3>
+            <p>दूसरों की भावनाओं और दृष्टिकोण को समझना। उनके प्रति संवेदनशीलता विकसित करना।</p>
+            <div class="connection-box"><strong>लिंक:</strong> सामाजिक/भावनात्मक नवीनीकरण।</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

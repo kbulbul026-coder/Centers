@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>काइज़न स्टेप्स | निरंतर सुधार</title>
+    <style>
+        :root {
+            --kaizen-blue: #2980b9;
+            --kaizen-green: #27ae60;
+            --kaizen-red: #e74c3c;
+            --sidebar-dark: #2c3e50;
+            --bg-light: #f9f9f9;
+        }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; display: flex; background: var(--bg-light); color: #333; }
+        
+        /* Sidebar Navigation */
+        .sidebar { width: 250px; height: 100vh; background: var(--sidebar-dark); color: white; position: fixed; padding-top: 20px; }
+        .sidebar h3 { text-align: center; border-bottom: 1px solid #444; padding-bottom: 15px; margin-bottom: 10px; }
+        .sidebar a { padding: 15px 25px; text-decoration: none; color: #bdc3c7; display: block; transition: 0.3s; }
+        .sidebar a:hover { background: #34495e; color: white; border-left: 5px solid var(--kaizen-blue); }
+
+        /* Main Content Area */
+        .main { margin-left: 250px; padding: 40px; width: calc(100% - 250px); line-height: 1.7; }
+        
+        .hero-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 30px; border-top: 8px solid var(--kaizen-blue); }
+        .quote-box { font-style: italic; color: var(--kaizen-blue); font-size: 1.2rem; text-align: center; margin: 20px 0; }
+
+        /* Kaizen Grid */
+        .kaizen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+        .k-card { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center; border-bottom: 4px solid var(--kaizen-blue); transition: 0.3s; }
+        .k-card:hover { transform: translateY(-5px); }
+        .k-card h3 { margin-bottom: 10px; color: var(--kaizen-blue); }
+
+        /* Renovation Table */
+        .reno-section { background: #fff; padding: 30px; border-radius: 15px; border: 2px dashed #bdc3c7; margin-top: 40px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 15px; border: 1px solid #ddd; text-align: left; }
+        th { background: #f2f2f2; color: var(--sidebar-dark); }
+        .step-num { display: inline-block; width: 25px; height: 25px; background: var(--kaizen-blue); color: white; border-radius: 50%; text-align: center; line-height: 25px; margin-right: 10px; font-size: 0.8rem; }
+
+        .muda-alert { background: #fdf2f2; border-left: 5px solid var(--kaizen-red); padding: 20px; border-radius: 8px; margin-top: 25px; }
+        .btn-back { display: inline-block; margin-top: 30px; padding: 10px 25px; background: var(--sidebar-dark); color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h3>Life Dashboard</h3>
+    <a href="/">🏠 होम (Dashboard)</a>
+    <a href="/kaizen-steps" style="color: white; font-weight: bold;">📈 काइज़न स्टेप्स</a>
+    <a href="/victory-hour">🏆 Victory Hour</a>
+    <a href="/ppc-balance">⚖️ P/PC संतुलन</a>
+</div>
+
+<div class="main">
+    <div class="hero-card">
+        <h1>📈 काइज़न (Kaizen): बेहतर के लिए बदलाव</h1>
+        <div class="quote-box">"निरंतरता, तीव्रता से बेहतर है"</div>
+        
+        <div class="kaizen-grid">
+            <div class="k-card"><h3>🍎 शारीरिक</h3><p>फिटनेस: रोज़ाना सिर्फ 5 मिनट स्ट्रेचिंग।</p></div>
+            <div class="k-card"><h3>📖 मानसिक</h3><p>ज्ञान: सोने से पहले केवल 1 पेज पढ़ना।</p></div>
+            <div class="k-card"><h3>🧘 आध्यात्मिक</h3><p>शांति: काम शुरू करने से पहले 1 मिनट का मौन।</p></div>
+            <div class="k-card"><h3>🤝 सामाजिक</h3><p>संबंध: दिन में एक व्यक्ति को 'धन्यवाद' कहना।</p></div>
+        </div>
+
+        <div class="muda-alert">
+            <strong>🚫 मुडा (Muda) को हटाएँ:</strong> अपने दिन के उन 5 मिनटों को पहचानें जो आप व्यर्थ की चिंताओं या 'स्क्रॉलिंग' में बिताते हैं, और उन्हें इन छोटे सुधारों से बदलें।
+        </div>
+    </div>
+
+    <div class="reno-section">
+        <h2>🏠 व्यक्तित्व का जीर्णोद्धार (Life Construction)</h2>
+        <p><em>"पेंटिंग बदलना आसान है, नींव मजबूत करना ही असली इंजीनियरिंग है।"</em></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>कदम</th>
+                    <th>घर (भौतिक)</th>
+                    <th>जीवन/व्यक्तित्व (आंतरिक)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="step-num">1</span> स्वीकार</td>
+                    <td>दरार को पहचानना</td>
+                    <td>अपनी गलती या कमजोरी को मानना</td>
+                </tr>
+                <tr>
+                    <td><span class="step-num">2</span> सफाई</td>
+                    <td>कचरा हटाना</td>
+                    <td>बुरी आदतों और नकारात्मक सोच को छोड़ना</td>
+                </tr>
+                <tr>
+                    <td><span class="step-num">3</span> मजबूती</td>
+                    <td>सीमेंट-ईंट से मरम्मत</td>
+                    <td>नए कौशल सीखना और अनुशासन अपनाना</td>
+                </tr>
+                <tr>
+                    <td><span class="step-num">4</span> धैर्य</td>
+                    <td>सीमेंट सूखने का इंतज़ार</td>
+                    <td>निरंतर अभ्यास और समय देना</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p style="margin-top: 25px; font-weight: bold; color: var(--kaizen-green);">
+            क्या आप आज 1% सुधार के लिए तैयार हैं?
+        </p>
+    </div>
+
+    <a href="/" class="btn-back">← वापस डैशबोर्ड</a>
+</div>
+
+</body>
+</html>
