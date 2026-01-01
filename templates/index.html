@@ -2,76 +2,167 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>Life Dashboard v2.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paresh Kumar Hansda | Principles OS v3.0</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        :root {
-            --primary: #0f172a;
-            --accent-sel: #8e44ad;
-            --accent-saw: #e74c3c;
-            --accent-kaizen: #2ecc71;
-            --bg: #f1f5f9;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+        
+        body { 
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; 
+            background-color: #0f172a; 
+            color: #f8fafc;
+            min-height: 100vh;
         }
 
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
-        
-        .dashboard-container { background: white; width: 650px; padding: 35px; border-radius: 24px; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
-        
-        #tip-widget { background: #fff9c4; padding: 18px; border-radius: 12px; margin-bottom: 25px; border-left: 6px solid #f1c40f; }
-        
-        .grid-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-        
-        .btn { 
-            display: flex; align-items: center; padding: 12px 18px; text-decoration: none; color: white; border-radius: 10px; font-weight: 600; font-size: 0.9rem; transition: 0.3s; 
+        .glass-card { 
+            background: rgba(30, 41, 59, 0.7); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255,255,255,0.1); 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+        .glass-card:hover { 
+            transform: translateY(-5px); 
+            border-color: #38bdf8;
+            box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.2);
+        }
+
+        .gradient-text { 
+            background: linear-gradient(to right, #38bdf8, #818cf8); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        .os-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
         
-        /* Categories */
-        .btn-saw { background: var(--accent-saw); } /* Sharpen Saw */
-        .btn-sel { background: var(--accent-sel); } /* Skills Growth */
-        .btn-kz { background: var(--accent-kaizen); } /* Kaizen */
-        .btn-blue { background: #3498db; }
-        .btn-dark { background: #34495e; }
-        .btn-gold { background: #f1c40f; color: #2c3e50 !important; }
-        .btn-teal { background: #1abc9c; }
+        #tip-widget {
+            border-left: 4px solid #f1c40f;
+            background: rgba(241, 196, 15, 0.1);
+        }
     </style>
 </head>
-<body>
+<body class="p-4 md:p-10">
 
-    <div class="dashboard-container">
-        <h2 style="text-align: center; color: var(--primary); margin-top: 0;">Principles Operating System</h2>
-        
-        <div id="tip-widget">
-            <small style="color: #d68910; font-weight: bold;">💡 DAILY MANTRA</small>
-            <p id="tip-text" style="margin: 5px 0 0 0; color: #1c2833; font-style: italic;">लोड हो रहा है...</p>
+    <div class="max-w-6xl mx-auto">
+        <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight gradient-text">PARESH KUMAR HANSDA</h1>
+                <p class="text-gray-400 mt-2 font-medium tracking-wide">Electrical Engineer | Web Developer | Life Learner</p>
+            </div>
+            
+            <div id="tip-widget" class="p-4 rounded-xl max-w-sm">
+                <small class="text-yellow-500 font-bold uppercase text-xs tracking-widest">💡 Daily Mantra</small>
+                <p id="tip-text" class="text-gray-200 italic text-sm mt-1">लोड हो रहा है...</p>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="space-y-6">
+                <h2 class="text-blue-400 text-xs font-bold uppercase tracking-widest border-b border-blue-900 pb-2">Personal Growth</h2>
+                
+                <a href="/self-science" class="glass-card p-6 rounded-2xl block group">
+                    <div class="flex items-center gap-4">
+                        <span class="text-3xl group-hover:scale-110 transition-transform">🧠</span>
+                        <div>
+                            <h3 class="font-bold">Self-Science</h3>
+                            <p class="text-xs text-gray-400">EQ प्रबंधन और आत्म-स्वीकृति</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/kaizen-steps" class="glass-card p-6 rounded-2xl block group">
+                    <div class="flex items-center gap-4">
+                        <span class="text-3xl group-hover:scale-110 transition-transform">📈</span>
+                        <div>
+                            <h3 class="font-bold">Kaizen Steps</h3>
+                            <p class="text-xs text-gray-400">1% निरंतर सुधार की प्रक्रिया</p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <a href="/stoplight" class="os-btn bg-orange-600/20 text-orange-400 border border-orange-600/30 hover:bg-orange-600/30">
+                        <span>🚦</span> <span class="text-xs">स्टॉपलाइट</span>
+                    </a>
+                    <a href="/victory-hour" class="os-btn bg-yellow-600/20 text-yellow-400 border border-yellow-600/30 hover:bg-yellow-600/30">
+                        <span>🏆</span> <span class="text-xs">Victory Hour</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h2 class="text-indigo-400 text-xs font-bold uppercase tracking-widest border-b border-indigo-900 pb-2">Knowledge Vault</h2>
+                
+                <a href="/reading-list" class="glass-card p-6 rounded-2xl block border-t-4 border-indigo-500">
+                    <h3 class="text-lg font-bold mb-1">📚 Reading List</h3>
+                    <p class="text-sm text-gray-400">21 महान पुस्तकें और उनके सबक</p>
+                </a>
+
+                <a href="/knowledge-map" class="glass-card p-6 rounded-2xl block">
+                    <h3 class="text-lg font-bold mb-1">🧭 Knowledge Map</h3>
+                    <p class="text-sm text-gray-400">सिद्धांतों का साझा संगम</p>
+                </a>
+
+                <div class="bg-slate-800/40 p-4 rounded-2xl border border-slate-700">
+                    <h4 class="text-xs font-bold text-gray-500 mb-3 uppercase">Social Intelligence</h4>
+                    <div class="space-y-2">
+                        <a href="/skills-growth" class="block text-sm hover:text-blue-400 transition">🎓 SEL कौशल विकास</a>
+                        <a href="/xyz-formula" class="block text-sm hover:text-blue-400 transition">💬 XYZ फॉर्मूला</a>
+                        <a href="/child-confidence" class="block text-sm hover:text-blue-400 transition">✨ इमोशनल कोच</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h2 class="text-emerald-400 text-xs font-bold uppercase tracking-widest border-b border-emerald-900 pb-2">Foundation</h2>
+                
+                <a href="/purpose" class="glass-card p-6 rounded-2xl block border-l-4 border-amber-500">
+                    <h3 class="text-lg font-bold mb-1">🔥 Life Purpose</h3>
+                    <p class="text-sm text-gray-400">The Splendid Torch दर्शन</p>
+                </a>
+
+                <a href="/sharpen-the-saw" class="glass-card p-6 rounded-2xl block group">
+                    <div class="flex items-center gap-4">
+                        <span class="text-3xl group-hover:rotate-12 transition-transform">🪚</span>
+                        <div>
+                            <h3 class="font-bold">आरी तेज करना</h3>
+                            <p class="text-xs text-gray-400">जीवन का नवीनीकरण और संतुलन</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/mission" class="os-btn bg-emerald-600/20 text-emerald-400 border border-emerald-600/30 hover:bg-emerald-600/30 justify-center">
+                    <span>📜</span> मेरा मिशन वक्तव्य
+                </a>
+                
+                <a href="/success-denominator" class="os-btn bg-slate-700/50 text-gray-300 border border-slate-600 hover:bg-slate-600 transition justify-center">
+                    <span>⚖️</span> Success & Finance
+                </a>
+            </div>
         </div>
 
-        <div class="grid-menu">
-            <a href="/sharpen-the-saw" class="btn btn-saw"><i>🪚</i> आरी तेज करना (Balance)</a>
-            <a href="/kaizen-steps" class="btn btn-kz"><i>📈</i> काइज़न (1% सुधार)</a>
-            
-            <a href="/skills-growth" class="btn btn-sel"><i>🎓</i> SEL कौशल विकास</a>
-            <a href="/xyz-formula" class="btn btn-dark"><i>💬</i> XYZ फॉर्मूला</a>
-            
-            <a href="/stoplight" class="btn btn-dark" style="background: #e67e22;"><i>🚦</i> स्टॉपलाइट मॉडल</a>
-            <a href="/victory-hour" class="btn btn-gold"><i>🏆</i> Victory Hour</a>
-            
-            <a href="/child-confidence" class="btn btn-teal"><i>✨</i> इमोशनल कोच</a>
-            <a href="/parenting-quiz" class="btn btn-sel" style="background: #9b59b6;"><i>📝</i> पैरेंटिंग क्विज़</a>
-            
-            <a href="/centers-matrix" class="btn btn-blue" style="grid-column: span 2;"><i>🧭</i> जीवन के केंद्र (Core Principles)</a>
-            <a href="/mission" class="btn btn-blue" style="grid-column: span 2; background: #27ae60;"><i>📜</i> मेरा मिशन वक्तव्य</a>
-
-            <a href="/self-acceptance" class="btn" style="background: #ff7675;"><i>💖</i> आत्म-स्वीकृति (Self-Science)</a>
-
-
-            <a href="/reading-list" class="btn btn-gold"><i>📚</i> नॉलेज वॉल्ट (20 Books)</a>
-
-<a href="/purpose" class="btn" style="background: linear-gradient(135deg, #1E3A8A 0%, #F59E0B 100%); color: white;">
-    <i>🔥</i> जीवन का उद्देश्य (The Splendid Torch)
-</a>
-
-
-        </div>
+        <footer class="mt-20 pt-10 border-t border-slate-800 text-center">
+            <h2 class="text-xl font-bold mb-6 text-gray-400">Professional Engineering Stack</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="bg-slate-800 px-4 py-2 rounded-full text-xs font-mono text-blue-300 border border-slate-700">AutoCAD Expert</span>
+                <span class="bg-slate-800 px-4 py-2 rounded-full text-xs font-mono text-indigo-300 border border-slate-700">Electrical Design</span>
+                <span class="bg-slate-800 px-4 py-2 rounded-full text-xs font-mono text-emerald-300 border border-slate-700">Flask Developer</span>
+            </div>
+            <p class="text-gray-600 mt-8 text-xs tracking-widest uppercase">Designed by Paresh | Built with Flask & Tailwind</p>
+        </footer>
     </div>
 
     <script>

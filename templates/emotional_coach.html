@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>इमोशनल कोच | Principles OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .step-card { display: none; }
+        .step-active { display: block; animation: fadeIn 0.5s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="p-6">
+
+    <div class="max-w-2xl mx-auto bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl">
+        <h1 class="text-3xl font-bold text-blue-400 mb-6 flex items-center gap-3">
+            <span>✨</span> इमोशनल कोच (SEL Tool)
+        </h1>
+
+        <div id="step1" class="step-card step-active">
+            <h2 class="text-xl font-semibold mb-4 text-red-400">🔴 चरण 1: स्टॉपलाइट (Stoplight)</h2>
+            <p class="text-gray-400 mb-6">अभी आप कैसा महसूस कर रहे हैं? पहले रुकें और गहराई से सांस लें।</p>
+            <div class="space-y-4">
+                <button onclick="nextStep(2, 'गुस्सा/तनाव')" class="w-full p-4 bg-red-900/30 border border-red-500 text-red-400 rounded-xl hover:bg-red-500 hover:text-white transition text-left">
+                    🏮 मैं गुस्से या तनाव में हूँ (Red Light)
+                </button>
+                <button onclick="nextStep(2, 'उलझन')" class="w-full p-4 bg-yellow-900/30 border border-yellow-500 text-yellow-400 rounded-xl hover:bg-yellow-500 hover:text-white transition text-left">
+                    🟡 मैं उलझन या असहज महसूस कर रहा हूँ (Yellow Light)
+                </button>
+            </div>
+        </div>
+
+        <div id="step2" class="step-card">
+            <h2 class="text-xl font-semibold mb-4 text-indigo-400">💬 चरण 2: XYZ फॉर्मूला (अभिव्यक्ति)</h2>
+            <p class="text-gray-400 mb-6">अपनी भावनाओं को बिना टकराव के व्यक्त करें:</p>
+            <div class="space-y-4">
+                <div>
+                    <label class="text-xs text-gray-500 uppercase font-bold">X: जब आपने यह किया...</label>
+                    <input id="inputX" type="text" placeholder="व्यवहार लिखें..." class="w-full bg-slate-800 border border-slate-700 p-3 rounded-lg mt-1 outline-none focus:border-indigo-500">
+                </div>
+                <div>
+                    <label class="text-xs text-gray-500 uppercase font-bold">Y: तो मुझे ऐसा महसूस हुआ...</label>
+                    <input id="inputY" type="text" placeholder="अपनी भावना लिखें..." class="w-full bg-slate-800 border border-slate-700 p-3 rounded-lg mt-1 outline-none focus:border-indigo-500">
+                </div>
+                <div>
+                    <label class="text-xs text-gray-500 uppercase font-bold">Z: क्योंकि मेरी ज़रूरत यह है...</label>
+                    <input id="inputZ" type="text" placeholder="अपनी ज़रूरत लिखें..." class="w-full bg-slate-800 border border-slate-700 p-3 rounded-lg mt-1 outline-none focus:border-indigo-500">
+                </div>
+                <button onclick="generateXYZ()" class="w-full py-3 bg-indigo-600 rounded-xl font-bold hover:bg-indigo-500 transition">रिस्पॉन्स तैयार करें</button>
+            </div>
+        </div>
+
+        <div id="step3" class="step-card">
+            <h2 class="text-xl font-semibold mb-4 text-emerald-400">✅ आपका समाधान</h2>
+            <div id="resultBox" class="bg-slate-800 p-6 rounded-2xl border-l-4 border-emerald-500 italic text-gray-200 mb-6"></div>
+            <p class="text-sm text-gray-500 mb-6 italic">"भावनाओं को नाम देना उन्हें नियंत्रित करने का पहला कदम है।"</p>
+            <button onclick="location.reload()" class="text-blue-400 font-bold hover:underline">← फिर से शुरू करें</button>
+        </div>
+    </div>
+
+    <script>
+        function nextStep(step, emotion) {
+            document.querySelectorAll('.step-card').forEach(card => card.classList.remove('step-active'));
+            document.getElementById('step' + step).classList.add('step-active');
+        }
+
+        function generateXYZ() {
+            const x = document.getElementById('inputX').value;
+            const y = document.getElementById('inputY').value;
+            const z = document.getElementById('inputZ').value;
+            const result = `जब आपने "${x}" किया, तो मुझे "${y}" महसूस हुआ, क्योंकि मेरी ज़रूरत "${z}" है।`;
+            document.getElementById('resultBox').innerText = result;
+            nextStep(3);
+        }
+    </script>
+</body>
+</html>
