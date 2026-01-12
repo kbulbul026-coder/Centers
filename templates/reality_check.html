@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>रियलिटी चेक | Principles OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .logic-card { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255,255,255,0.1); }
+        .input-focus:focus { border-color: #ef4444; box-shadow: 0 0 10px rgba(239, 68, 68, 0.2); outline: none; }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold text-red-500 mb-2">🎯 रे डेलियो रियलिटी चेक</h1>
+            <p class="text-gray-400">"सत्य का सामना करना ही प्रगति की पहली सीढ़ी है।"</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="logic-card p-6 rounded-2xl border-t-4 border-red-500">
+                <h3 class="font-bold text-lg mb-4 text-red-400">बुरा व्यवहार (BAD)</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li>❌ केवल अच्छा दिखने की चिंता करना</li>
+                    <li>❌ प्रथम-क्रम (1st order) के परिणामों पर निर्णय</li>
+                    <li>❌ खुद को जवाबदेह न ठहराना</li>
+                </ul>
+            </div>
+
+            <div class="logic-card p-6 rounded-2xl border-t-4 border-green-500">
+                <h3 class="font-bold text-lg mb-4 text-green-400">अच्छा व्यवहार (GOOD)</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li>✅ लक्ष्य प्राप्त करने की चिंता करना</li>
+                    <li>✅ 2nd/3rd order परिणामों पर विचार</li>
+                    <li>✅ पूरी व्यक्तिगत जवाबदेही लेना</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="bg-slate-900/50 p-8 rounded-3xl border border-slate-800">
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">प्रगति को गति दें (Action Plan)</h2>
+            <div class="space-y-8">
+                <div>
+                    <label class="block text-sm font-bold text-gray-500 uppercase mb-2">1. आप क्या चाहते हैं? (Goals)</label>
+                    <textarea placeholder="अपने स्पष्ट लक्ष्य लिखें..." class="w-full bg-slate-800 border border-slate-700 p-4 rounded-xl input-focus h-24 text-gray-200"></textarea>
+                    <p class="text-xs text-gray-500 mt-2">दिखावे के बजाय वास्तविक परिणामों पर ध्यान दें।</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-500 uppercase mb-2">2. सत्य क्या है? (Reality Check)</label>
+                    <textarea placeholder="वर्तमान स्थिति का ईमानदारी से विश्लेषण करें..." class="w-full bg-slate-800 border border-slate-700 p-4 rounded-xl input-focus h-24 text-gray-200"></textarea>
+                    <p class="text-xs text-gray-500 mt-2">एक 'हाइपर-रियलिस्ट' बनें—तथ्यों को वैसा ही देखें जैसे वे हैं।</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-500 uppercase mb-2">3. इसके बारे में क्या किया जाना चाहिए? (Action Plan)</label>
+                    <textarea placeholder="द्वितीय और तृतीय क्रम के परिणामों को ध्यान में रखते हुए कदम लिखें..." class="w-full bg-slate-800 border border-slate-700 p-4 rounded-xl input-focus h-24 text-gray-200"></textarea>
+                    <p class="text-xs text-gray-500 mt-2">कारण-प्रभाव (Cause-Effect) के तर्क पर आधारित निर्णय लें।</p>
+                </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <button class="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-10 rounded-full transition shadow-lg shadow-red-900/20">
+                    विश्लेषण सुरक्षित करें
+                </button>
+            </div>
+        </section>
+
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            <p>"जवाबदेही ही आपकी व्यक्तिगत शक्ति है।"</p>
+            <a href="/" class="text-blue-400 hover:underline mt-4 inline-block">← वापस डैशबोर्ड पर</a>
+        </footer>
+    </div>
+
+</body>
+</html>

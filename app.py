@@ -74,6 +74,11 @@ def reading_list():
 def purpose():
     return render_template('life_purpose.html')
 
+@app.route('/reality-check')
+def reality_check():
+    return render_template('reality_check.html')
+
+
 
 '''
 from flask import Flask, render_template, jsonify
