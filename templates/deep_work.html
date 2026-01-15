@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Deep Work Tracker | Principles OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .timer-circle { border: 8px solid #312e81; border-top: 8px solid #6366f1; transition: 0.3s; }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-10 flex justify-between items-end">
+            <div>
+                <h1 class="text-3xl font-bold text-indigo-500 mb-2">🧘‍♂️ Deep Work Mode</h1>
+                <p class="text-gray-400 italic">"एकाग्रता की तीव्रता = (समय) x (फोकस)" — Cal Newport</p>
+            </div>
+            <a href="/" class="text-sm text-indigo-400 hover:underline">← वापस डैशबोर्ड</a>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl text-center">
+                <h3 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Deep Work Timer</h3>
+                <div id="timer" class="w-48 h-48 rounded-full timer-circle mx-auto flex items-center justify-center text-4xl font-bold mb-6">
+                    25:00
+                </div>
+                <div class="flex justify-center gap-4">
+                    <button id="startBtn" onclick="toggleTimer()" class="bg-indigo-600 px-6 py-2 rounded-full font-bold hover:bg-indigo-500 transition">Start</button>
+                    <button onclick="resetTimer()" class="bg-slate-700 px-6 py-2 rounded-full font-bold hover:bg-slate-600 transition">Reset</button>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl">
+                <h3 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-4">Distraction Audit</h3>
+                <ul id="logList" class="space-y-3 text-sm text-gray-300">
+                    <li class="bg-slate-800 p-3 rounded-lg">✅ आज का गहरा काम: <span id="dailyHours">0</span> मिनट</li>
+                </ul>
+                <div class="mt-6">
+                    <label class="text-xs text-gray-500 block mb-2">क्या किसी चीज़ ने ध्यान भटकाया?</label>
+                    <div class="flex gap-2">
+                        <input id="distraction" type="text" placeholder="e.g. Social Media" class="bg-slate-800 border border-slate-700 p-2 rounded-lg flex-1 text-sm outline-none focus:border-indigo-500">
+                        <button onclick="logDistraction()" class="bg-red-900/30 text-red-400 border border-red-500/50 px-3 rounded-lg text-xs hover:bg-red-500 hover:text-white">Log It</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 text-center">
+                <div class="text-2xl mb-2">📵</div>
+                <p class="text-[10px] uppercase font-bold text-gray-500">Quit Social Media</p>
+            </div>
+            <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 text-center">
+                <div class="text-2xl mb-2">🧱</div>
+                <p class="text-[10px] uppercase font-bold text-gray-500">Work Deeply</p>
+            </div>
+            <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 text-center">
+                <div class="text-2xl mb-2">🥱</div>
+                <p class="text-[10px] uppercase font-bold text-gray-500">Embrace Boredom</p>
+            </div>
+            <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 text-center">
+                <div class="text-2xl mb-2">🌊</div>
+                <p class="text-[10px] uppercase font-bold text-gray-500">Drain the Shallows</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let timeLeft = 1500; // 25 minutes
+        let timerId = null;
+        let totalMinutes = parseInt(localStorage.getItem('deepWorkMins')) || 0;
+
+        document.getElementById('dailyHours').innerText = totalMinutes;
+
+        function toggleTimer() {
+            if (timerId) {
+                clearInterval(timerId);
+                timerId = null;
+                document.getElementById('startBtn').innerText = 'Resume';
+            } else {
+                document.getElementById('startBtn').innerText = 'Pause';
+                timerId = setInterval(() => {
+                    timeLeft--;
+                    updateDisplay();
+                    if (timeLeft <= 0) {
+                        clearInterval(timerId);
+                        saveWork();
+                        alert("Session Complete! Great focus.");
+                    }
+                }, 1000);
+            }
+        }
+
+        function updateDisplay() {
+            const mins = Math.floor(timeLeft / 60);
+            const secs = timeLeft % 60;
+            document.getElementById('timer').innerText = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        function resetTimer() {
+            clearInterval(timerId);
+            timerId = null;
+            timeLeft = 1500;
+            updateDisplay();
+            document.getElementById('startBtn').innerText = 'Start';
+        }
+
+        function saveWork() {
+            totalMinutes += 25;
+            localStorage.setItem('deepWorkMins', totalMinutes);
+            document.getElementById('dailyHours').innerText = totalMinutes;
+        }
+
+        function logDistraction() {
+            const input = document.getElementById('distraction');
+            if (input.value) {
+                const li = document.createElement('li');
+                li.className = "text-red-400 text-xs";
+                li.innerText = `⚠️ Distraction: ${input.value}`;
+                document.getElementById('logList').appendChild(li);
+                input.value = '';
+            }
+        }
+    </script>
+</body>
+</html>

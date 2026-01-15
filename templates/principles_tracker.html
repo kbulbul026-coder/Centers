@@ -1,0 +1,15 @@
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+        <h3 class="text-indigo-400 font-bold mb-4">🔍 डायग्नोसिस (Principle 147)</h3>
+        <p class="text-xs text-gray-500 mb-4">समस्या के लक्षणों के पीछे छिपे 'मूल कारण' को पहचानें।</p>
+        <textarea id="diagInput" placeholder="आज की समस्या और उसका मूल कारण..." class="w-full bg-slate-800 p-3 rounded-lg text-sm border border-slate-700 outline-none focus:border-indigo-500 h-24"></textarea>
+    </div>
+
+    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+        <h3 class="text-amber-500 font-bold mb-4">⚖️ 80/20 नियम (Principle 198)</h3>
+        <ul id="vitalFewList" class="space-y-2 text-sm">
+            <li class="flex items-center gap-2"><input type="checkbox" class="accent-amber-500"> आज का सबसे महत्वपूर्ण 20% कार्य</li>
+        </ul>
+        <button onclick="saveProgress()" class="mt-4 w-full bg-amber-600/20 text-amber-500 border border-amber-500/30 py-2 rounded-lg font-bold hover:bg-amber-600/30">प्रगति सुरक्षित करें</button>
+    </div>
+</div>

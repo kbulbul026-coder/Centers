@@ -309,5 +309,34 @@ def api_data():
     return jsonify(MIND_MAP_JSON)
 
 
+@app.route('/principles-system')
+def principles_system():
+    return render_template('principles_system.html')
+
+@app.route('/deep-work')
+def deep_work():
+    return render_template('deep_work.html')
+
+@app.route('/principles-check')
+def principles_check():
+    return render_template('principles_check.html')
+
+@app.route('/principles-tracker')
+def principles_tracker():
+    return render_template('principles_tracker.html')
+
+
+@app.route('/trust-truth')
+def trust_truth():
+    return render_template('trust_truth.html')
+
+@app.route('/mistake-learning')
+def mistake_learning():
+    return render_template('mistake_learning.html')
+
+@app.route('/mistake-learning1')
+def mistake_learning1():
+    return render_template('mistake_learning1.html')
+
 if __name__ == '__main__':
     app.run(debug=False)
