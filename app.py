@@ -339,7 +339,7 @@ def mistake_learning1():
     return render_template('mistake_learning1.html')
 
 @app.route('/machine-design')
-def mistake_learning1():
+def machine_design():
     return render_template('machine_design.html')
 
 
