@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+Ifrom flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
@@ -337,6 +337,12 @@ def mistake_learning():
 @app.route('/mistake-learning1')
 def mistake_learning1():
     return render_template('mistake_learning1.html')
+
+@app.route('/machine-design')
+def mistake_learning1():
+    return render_template('machine_design.html')
+
+
 
 if __name__ == '__main__':
     app.run(debug=False)
