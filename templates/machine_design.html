@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Principles: The Machine Design</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #1abc9c;
+            --text: #333;
+            --bg: #f4f7f6;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .intro {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--accent);
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent);
+        }
+        .highlight {
+            color: #e67e22;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--primary);
+            color: white;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>प्रबंधन के सिद्धांत (Management Principles)</h1>
+    <p>अपनी टीम को एक "मशीन" की तरह डिज़ाइन और संचालित करें</p>
+</header>
+
+<div class="container">
+    <div class="intro">
+        <p><strong>मूल मंत्र:</strong> एक मैनेजर के रूप में आपका काम केवल काम करना नहीं है, बल्कि एक ऐसा सिस्टम बनाना है जो लक्ष्यों को प्राप्त कर सके। आप मशीन के एक पुर्जे नहीं, बल्कि उसके <strong>डिज़ाइनर</strong> हैं।</p>
+    </div>
+
+    <div class="section">
+        <h2>1. मशीन का डिज़ाइन और संचालन</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>मैनेजिंग बनाम माइक्रो-मैनेजिंग</h3>
+                <p>माइक्रो-मैनेजिंग का मतलब है लोगों को बताना कि क्या करना है। मैनेजिंग का मतलब है यह समझना कि आपके <strong>लोग और डिज़ाइन</strong> कितनी अच्छी तरह काम कर रहे हैं।</p>
+            </div>
+            <div class="card">
+                <h3>दो स्तरों पर चर्चा (Two-Level Discussion)</h3>
+                <p>जब समस्या आए तो दो स्तरों पर बात करें: <br>
+                1. <strong>मशीन स्तर:</strong> यह परिणाम क्यों आया? <br>
+                2. <strong>केस स्तर:</strong> अभी समाधान क्या है?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. विकासवादी प्रक्रिया (Evolutionary Loop)</h2>
+        <p>समस्याओं को पहचानें और उनका निदान करें।</p>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>बड़ा सैंपल साइज (Sample Size)</h3>
+                <p>किसी एक समस्या को अपवाद न मानें। बहुत सारी समस्याओं को देखें ताकि आप <strong>जड़ (Root Cause)</strong> तक पहुँच सकें।</p>
+            </div>
+            <div class="card">
+                <h3>उच्च-स्तरीय सोच</h3>
+                <p>चीज़ों को "ऊपर से" देखें। एक फोटो की तरह जो पूरी दुनिया दिखाती है, फिर देश, फिर आपका मोहल्ला। परिप्रेक्ष्य (Perspective) ही सब कुछ है।</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>3. लोग और जवाबदेही</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>"Skiing Together"</h3>
+                <p>अपने लोगों के करीब रहें जैसे एक स्की प्रशिक्षक होता है। उन्हें करीब से देखें ताकि आप उनकी ताकत और कमजोरी जान सकें।</p>
+            </div>
+            <div class="card">
+                <h3>साफ अनुबंध (Clear Contract)</h3>
+                <p>ज़िम्मेदारियाँ स्पष्ट रूप से सौंपें। अगर उम्मीदें साफ नहीं हैं, तो आप किसी को जवाबदेह नहीं ठहरा सकते।</p>
+            </div>
+            <div class="card">
+                <h3>एस्केलेशन (Escalation)</h3>
+                <p>जब कोई अपनी ज़िम्मेदारी नहीं संभाल पा रहा हो, तो उसे "एस्केलेशन बटन" दबाकर ऊपर बताना चाहिए ताकि गाड़ी क्रैश न हो।</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>4. कठिन लेकिन सही निर्णय</h2>
+        <div class="card" style="width: 100%;">
+            <p>• <strong>सच्चाई और गुणवत्ता:</strong> इस बात की चिंता न करें कि लोग आपको पसंद करते हैं या नहीं। इस बात की चिंता करें कि क्या आप उन्हें महान बनने में मदद कर रहे हैं।</p>
+            <p>• <strong>तर्क सर्वोपरि है:</strong> भावनाओं का सम्मान करें, लेकिन निर्णय <strong>तर्क (Logic) और सामान्य ज्ञान</strong> पर आधारित होने चाहिए।</p>
+            <p>• <strong>मालिक की तरह सोचें:</strong> पैसे को ऐसे खर्च करें जैसे वह आपका अपना हो।</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 मैनेजमेंट गाइड्स | "The proof is in the pudding."</p>
+</footer>
+
+</body>
+</html>
