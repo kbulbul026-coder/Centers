@@ -343,6 +343,11 @@ def machine_design():
     return render_template('machine_design.html')
 
 
+@app.route('/probing-system')
+def probing-system():
+    return render_template('probing_system.html')
+
+
 
 if __name__ == '__main__':
     app.run(debug=False)
