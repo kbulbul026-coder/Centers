@@ -347,6 +347,9 @@ def machine_design():
 def probing_system():
     return render_template('probing_system.html')
 
+@app.route('/evaluation-system')
+def evaluation_system():
+    return render_template('evaluation_system.html')
 
 
 if __name__ == '__main__':
