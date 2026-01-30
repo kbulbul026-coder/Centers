@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probing the Machine | Principles OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+        body { 
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; 
+            background-color: #0f172a; 
+            color: #f8fafc; 
+        }
+        .os-card { 
+            background: rgba(30, 41, 59, 0.7); 
+            border: 1px solid rgba(255,255,255,0.08); 
+            transition: all 0.3s ease;
+        }
+        .os-card:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            border-color: #a855f7; /* Purple accent */
+        }
+    </style>
+</head>
+<body class="p-6 md:p-12 min-h-screen">
+
+    <div class="max-w-6xl mx-auto">
+        <header class="mb-12 border-b border-slate-800 pb-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-2 flex items-center gap-3">
+                        <span>🕵️‍♂️</span> गहराई से जांच (Probing Deep)
+                    </h1>
+                    <p class="text-purple-400 font-medium">"अपनी मशीन (टीम) से क्या उम्मीद करनी है, यह जानने के लिए गहराई से जांचें।"</p>
+                </div>
+                <a href="/" class="text-sm font-bold text-slate-400 hover:text-white bg-slate-800 px-4 py-2 rounded-lg transition">
+                    ← डैशबोर्ड
+                </a>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <div class="os-card p-8 rounded-3xl border-t-4 border-purple-500">
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-2 text-purple-400">
+                    <span class="text-2xl">1.</span> जांच क्यों ज़रूरी है?
+                </h2>
+                <ul class="space-y-6 text-gray-300 leading-relaxed">
+                    <li class="pl-4 border-l-2 border-slate-600">
+                        <strong class="text-white block mb-1">लगातार चुनौती दें</strong>
+                        अपने लोगों को जानें और सुनिश्चित करें कि वे अपना काम उत्कृष्ट रूप से करें। इसके लिए उन्हें लगातार चुनौती देना आवश्यक है, भले ही वे अच्छा काम कर रहे हों।
+                    </li>
+                    <li class="pl-4 border-l-2 border-slate-600">
+                        <strong class="text-white block mb-1">ईंधन के रूप में गलतियाँ</strong>
+                        जांच करने का उद्देश्य लोगों को याद दिलाना है कि समस्याएँ और गलतियाँ सुधार के लिए 'ईंधन' (Fuel) हैं।
+                    </li>
+                    <li class="pl-4 border-l-2 border-slate-600">
+                        <strong class="text-white block mb-1">आश्चर्य से बचें</strong>
+                        जांच इस तरह करें कि समस्याओं के आने से पहले ही आपको उनका आभास हो जाए। "No Surprises" नियम का पालन करें।
+                    </li>
+                </ul>
+            </div>
+
+            <div class="os-card p-8 rounded-3xl border-t-4 border-pink-500">
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-2 text-pink-400">
+                    <span class="text-2xl">2.</span> दोतरफा जिम्मेदारी (Two-Way)
+                </h2>
+                <ul class="space-y-6 text-gray-300 leading-relaxed">
+                    <li class="pl-4 border-l-2 border-slate-600">
+                        <strong class="text-white block mb-1">मैनेजर को भी चुनौती दें</strong>
+                        अपने लोगों को प्रोत्साहित करें कि वे आपकी (मैनेजर की) भी जांच करें। मैनेजर्स अक्सर उतना सही नहीं होते जितना लोग मानते हैं।
+                    </li>
+                    <li class="pl-4 border-l-2 border-slate-600">
+                        <strong class="text-white block mb-1">दर्शक बनाम खिलाड़ी</strong>
+                        आलोचना को आमंत्रित करने से असंतोष सतह पर आता है। लोगों को "दर्शक दीर्घा" (Stands) से हटाकर "मैदान" (Field) पर लाएं ताकि वे समाधान का हिस्सा बनें।
+                    </li>
+                    <li class="pl-4 border-l-2 border-slate-600">
+                        <strong class="text-white block mb-1">नीचे के स्तर की जांच (Skip Level)</strong>
+                        अपने सीधे रिपोर्ट्स के नीचे काम करने वाले लोगों की भी जांच करें। यह समझने के लिए कि आपका मैनेजर दूसरों को कैसे मैनेज करता है, आपको उसके अधीनस्थों को जानना होगा।
+                    </li>
+                </ul>
+            </div>
+
+            <div class="os-card p-8 rounded-3xl border-t-4 border-red-500">
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-2 text-red-400">
+                    <span class="text-2xl">3.</span> लड़ाई मत चुनें (Don't Pick Battles)
+                </h2>
+                <div class="bg-red-900/20 p-4 rounded-xl border border-red-500/30 mb-4">
+                    <p class="text-red-300 font-bold italic">"Don’t pick your battles. Fight them all."</p>
+                </div>
+                <ul class="space-y-4 text-gray-300 leading-relaxed text-sm">
+                    <li>1. छोटी बुराइयाँ बड़ी समस्याओं का लक्षण हो सकती हैं।</li>
+                    <li>2. छोटे मतभेदों को सुलझाने से भविष्य के बड़े टकराव बचते हैं।</li>
+                    <li>3. निरंतर सुधार (Constant Reinforcement) लोगों को प्रशिक्षित करने में मदद करता है।</li>
+                </ul>
+            </div>
+
+            <div class="os-card p-8 rounded-3xl border-t-4 border-indigo-500">
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-2 text-indigo-400">
+                    <span class="text-2xl">4.</span> विश्वास और पारदर्शिता
+                </h2>
+                <ul class="space-y-6 text-gray-300 leading-relaxed">
+                    <li class="pl-4 border-l-2 border-slate-600">
+                        <strong class="text-white block mb-1">दोबारा जांचें (Double Check)</strong>
+                        यह न मानें कि लोगों के उत्तर हमेशा सही होते हैं। उन्हें कभी-कभी 'डबल चेक' करें। यह अविश्वास नहीं है, बल्कि सटीकता (Accuracy) सुनिश्चित करने की प्रक्रिया है।
+                    </li>
+                    <li class="pl-4 border-l-2 border-slate-600">
+                        <strong class="text-white block mb-1">पारदर्शी जांच</strong>
+                        जांच को निजी (Private) रखने के बजाय पारदर्शी (Transparent) बनाएं। इससे जांच की गुणवत्ता सुनिश्चित होती है और सत्य खोजने की संस्कृति मजबूत होती है।
+                    </li>
+                    <li class="pl-4 border-l-2 border-slate-600">
+                        <strong class="text-white block mb-1">किसी को न छोड़ें (Don't let off the hook)</strong>
+                        कठिन प्रश्न पूछें और स्वतंत्र रूप से ऑडिट करें।
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <footer class="mt-16 border-t border-slate-800 pt-8 text-center text-gray-500 text-sm">
+            <p>"समस्याओं का आश्चर्यजनक रूप से आना इस बात का संकेत है कि आप अपनी मशीन से बहुत दूर हैं।"</p>
+        </footer>
+    </div>
+
+</body>
+</html>
