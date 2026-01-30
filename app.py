@@ -344,7 +344,7 @@ def machine_design():
 
 
 @app.route('/probing-system')
-def probing-system():
+def probing_system():
     return render_template('probing_system.html')
 
 
