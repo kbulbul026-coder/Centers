@@ -352,5 +352,14 @@ def evaluation_system():
     return render_template('evaluation.html')
 
 
+
+@app.route('/training_and_testing')
+def training_and_testing():
+    return render_template('training_and_testing.html')
+
+
+
+
+
 if __name__ == '__main__':
     app.run(debug=False)
