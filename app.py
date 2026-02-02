@@ -358,6 +358,12 @@ def training_and_testing():
     return render_template('training_and_testing.html')
 
 
+@app.route('/sorting_people')
+def sorting_people():
+    return render_template('sorting_people.html')
+
+
+
 
 
 
