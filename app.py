@@ -360,7 +360,7 @@ def training_and_testing():
 
 @app.route('/problem_solving')
 def problem_solving():
-    return render_template('problem_soving.html')
+    return render_template('problem_solving.html')
 
 
 
