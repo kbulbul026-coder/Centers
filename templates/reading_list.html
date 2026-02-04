@@ -2,13 +2,14 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>नॉलेज वॉल्ट | 21 किताबें</title>
+    <title>नॉलेज वॉल्ट | 22 पुस्तकें</title>
     <style>
         :root {
             --gold: #d4af37;
             --dark-blue: #2c3e50;
             --accent-blue: #3498db;
             --bg-gray: #f8f9fa;
+            --deep-work: #e74c3c;
         }
         body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg-gray); margin: 0; padding: 40px; color: #333; }
         .container { max-width: 1100px; margin: auto; }
@@ -28,11 +29,12 @@
         .book-card h4 { margin: 0; font-size: 1rem; color: var(--dark-blue); }
         .book-card p { font-size: 0.8em; color: #7f8c8d; margin-top: 5px; }
 
-        /* Special Cards (20 & 21) */
+        /* Special Cards */
         .special-card { 
             grid-column: 1 / -1; background: white; padding: 30px; 
             border-radius: 15px; margin-top: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
+        .deep-work-card { border-left: 10px solid var(--deep-work); }
         .eq-card { border-top: 8px solid #8e44ad; }
         .covey-card { background: var(--dark-blue); color: white; border-left: 10px solid var(--gold); }
 
@@ -48,7 +50,7 @@
 <div class="container">
     <div class="header">
         <h1>📚 मेरा नॉलेज वॉल्ट (Knowledge Vault)</h1>
-        <span class="stats-badge">🎯 21 महान पुस्तकें पूरी हुईं</span>
+        <span class="stats-badge">🎯 22 महान पुस्तकें पूरी हुईं</span>
     </div>
 
     <div class="book-grid">
@@ -58,6 +60,7 @@
         <div class="book-card"><h4>4. Richest Man in Babylon</h4><p>जॉर्ज एस. क्लैसन</p></div>
         <div class="book-card"><h4>5. Psychology of Money</h4><p>मॉर्गन हाउससेल</p></div>
         <div class="book-card"><h4>6. Think and Grow Rich</h4><p>नेपोलियन हिल</p></div>
+        
         <div class="book-card"><h4>7. The Secret</h4><p>रोंडा बर्न</p></div>
         <div class="book-card"><h4>8. Ikigai</h4><p>जापानी रहस्य</p></div>
         <div class="book-card"><h4>9. The Alchemist</h4><p>पाउलो कोएल्हो</p></div>
@@ -72,13 +75,18 @@
         <div class="book-card"><h4>18. Subconscious Mind</h4><p>जोसेफ मर्फी</p></div>
         <div class="book-card"><h4>19. Man's Search for Meaning</h4><p>विक्टर फ्रैंकल</p></div>
 
+        <div class="special-card deep-work-card">
+            <h3 style="color: var(--deep-work); margin-top: 0;">🎯 20. Deep Work – Cal Newport</h3>
+            <p>यह आपकी 'मशीन' की दक्षता बढ़ाने का मूल मंत्र है। आपने सीखा: बिना विक्षेपण (Distraction) के उच्च-मूल्य वाले कार्य करना और 'उथले काम' (Shallow work) को कम करना।</p>
+        </div>
+
         <div class="special-card eq-card">
-            <h3 style="color: #8e44ad; margin-top: 0;">🧠 20. Emotional Intelligence – Daniel Goleman</h3>
+            <h3 style="color: #8e44ad; margin-top: 0;">🧠 21. Emotional Intelligence – Daniel Goleman</h3>
             <p>यह आपके 'Self-Science' का आधार है। आपने सीखा: आत्म-जागरूकता, आत्म-नियमन, प्रेरणा, सहानुभूति और सामाजिक कौशल।</p>
         </div>
 
         <div class="special-card covey-card">
-            <h2 style="margin-top: 0; color: var(--gold);">💎 21. 7 Habits of Highly Effective People – Stephen Covey</h2>
+            <h2 style="margin-top: 0; color: var(--gold);">💎 22. 7 Habits of Highly Effective People – Stephen Covey</h2>
             <p>यह आपके पूरे लाइफ डैशबोर्ड का "ऑपरेटिंग सिस्टम" है। इसने आपको 'निर्भरता' से 'स्वतंत्रता' और फिर 'परस्पर निर्भरता' की ओर बढ़ना सिखाया।</p>
             <div class="habit-container">
                 <div class="habit-tag">1. प्रोएक्टिव बनें</div>
