@@ -369,6 +369,10 @@ def sorting_people():
     return render_template('sorting_people.html')
 
 
+@app.route('/diagnosis_drilldown')
+def diagnosis_drilldown():
+    return render_template('diagnosis_drilldown.html')
+
 
 
 
