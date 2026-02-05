@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis & Drilldown | Principles OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .logic-card { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255,255,255,0.08); transition: 0.3s; }
+        .logic-card:hover { border-color: #3b82f6; }
+        .step-number { background: #3b82f6; color: white; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: bold; font-size: 14px; }
+    </style>
+</head>
+<body class="p-6 md:p-12 min-h-screen">
+
+    <div class="max-w-6xl mx-auto">
+        <header class="mb-12 border-b border-slate-800 pb-8 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-2">🩺 निदान: लक्षणों के पीछे का सच</h1>
+                <p class="text-blue-400 font-medium">"समस्याएं आपकी मशीन के डिजाइन और लोगों का परिणाम हैं।"</p>
+            </div>
+            <a href="/" class="text-sm font-bold text-slate-400 hover:text-white bg-slate-800 px-4 py-2 rounded-lg transition">← डैशबोर्ड</a>
+        </header>
+
+        <section class="bg-blue-900/10 p-8 rounded-3xl border border-blue-500/30 mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-white">⚙️ मशीन का विश्लेषण (Principle 148)</h2>
+            <p class="text-gray-300 leading-relaxed">
+                सभी समस्याएँ उनके <strong>मूल कारणों (Root Causes)</strong> की अभिव्यक्ति मात्र हैं। समस्याओं को 'वन-ऑफ' (एकल घटना) न मानें। यदि आपका डिजाइन और लोग दोनों उत्कृष्ट हैं, तो परिणाम भी उत्कृष्ट होंगे। निदान का अर्थ है यह देखना कि 'डिजाइन' विफल हुआ या 'लोग'।
+            </p>
+        </section>
+
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">❓ निदान के लिए 6 प्रश्न</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <div class="logic-card p-6 rounded-2xl">
+                <p class="text-xs text-blue-400 font-bold mb-2">STEP 1</p>
+                <p class="text-sm font-bold">आपने कौन सी 'सब-ऑप्टिमैलिटी' (खामी) का अनुभव किया?</p>
+            </div>
+            <div class="logic-card p-6 rounded-2xl">
+                <p class="text-xs text-blue-400 font-bold mb-2">STEP 2</p>
+                <p class="text-sm font-bold">जिम्मेदार पक्ष (Responsible Party) कौन है? विशिष्ट नाम लें।</p>
+            </div>
+            <div class="logic-card p-6 rounded-2xl">
+                <p class="text-xs text-blue-400 font-bold mb-2">STEP 3</p>
+                <p class="text-sm font-bold">आपका "मेंटल मैप" क्या था? इसे कैसे काम करना चाहिए था?</p>
+            </div>
+            <div class="logic-card p-6 rounded-2xl">
+                <p class="text-xs text-blue-400 font-bold mb-2">STEP 4</p>
+                <p class="text-sm font-bold">क्या टूटा? डिजाइन (नियम) या लोगों का व्यवहार?</p>
+            </div>
+            <div class="logic-card p-6 rounded-2xl">
+                <p class="text-xs text-blue-400 font-bold mb-2">STEP 5</p>
+                <p class="text-sm font-bold">मूल कारण (Root Cause) क्या है? (विशेषण का प्रयोग करें: जैसे 'अनुभवहीनता')</p>
+            </div>
+            <div class="logic-card p-6 rounded-2xl">
+                <p class="text-xs text-blue-400 font-bold mb-2">STEP 6</p>
+                <p class="text-sm font-bold">क्या यह पुराने पैटर्न के समान है? व्यवस्थित समाधान क्या है?</p>
+            </div>
+        </div>
+
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center text-white italic">"Drilldown" तकनीक: 80/20 समझ</h2>
+            <div class="space-y-8">
+                <div class="flex gap-6 items-start">
+                    <div class="step-number mt-1">1</div>
+                    <div class="flex-1 bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                        <h4 class="font-bold text-lg mb-2">समस्याओं की सूची बनाएं (List Problems)</h4>
+                        <p class="text-sm text-gray-400">समस्याओं को समाधान के साथ भ्रमित न करें। विशिष्ट रहें और नाम लें। उदाहरण के लिए, "क्षमता की कमी" समस्या नहीं है, "देरी से रिपोर्ट मिलना" समस्या है।</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 items-start">
+                    <div class="step-number mt-1">2</div>
+                    <div class="flex-1 bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                        <h4 class="font-bold text-lg mb-2">मूल कारणों की पहचान (Identify Root Causes)</h4>
+                        <p class="text-sm text-gray-400">पूछें: 'क्यों?' मूल कारण एक 'कारण' है, 'क्रिया' नहीं। यह आमतौर पर या तो डिजाइन की खराबी है या व्यक्ति की क्षमता/प्रशिक्षण की कमी।</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-6 items-start">
+                    <div class="step-number mt-1">3</div>
+                    <div class="flex-1 bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                        <h4 class="font-bold text-lg mb-2">योजना बनाएं और लागू करें (Plan & Do)</h4>
+                        <p class="text-sm text-gray-400">एक मूवी स्क्रिप्ट लिखें—कौन, क्या और कब करेगा। व्यक्तिगत जवाबदेही और लक्ष्य तिथियां निर्धारित करें।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="os-card p-8 rounded-3xl border-l-4 border-amber-500 mb-12">
+            <h2 class="text-xl font-bold mb-4 text-amber-500">💡 मूल कारण का उदाहरण</h2>
+            <div class="space-y-2 text-sm font-mono text-gray-400">
+                <p>• "प्रोग्रामिंग खराब थी।" (Proximate Cause)</p>
+                <p>• "क्यों?" → "हैरी ने खराब प्रोग्रामिंग की।"</p>
+                <p>• "क्यों?" → "वह प्रशिक्षित नहीं था और जल्दी में था।" (Root Cause)</p>
+                <p class="text-amber-200 mt-4 italic font-sans">"अधिकांश मूल कारणों का पता विशिष्ट लोगों, विशेष रूप से 'जिम्मेदार पक्ष' (Responsible Party) से लगाया जा सकता है।"</p>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="bg-red-900/20 p-8 rounded-3xl border border-red-500/30">
+                <h3 class="font-bold text-red-400 mb-4">प्रबंधक क्यों विफल होते हैं?</h3>
+                <ul class="text-xs space-y-2 text-gray-300">
+                    <li>• वे बहुत दूर (Removed) होते हैं।</li>
+                    <li>• वे खराब स्थिति के आदी हो जाते हैं ("मेंढक की समस्या")।</li>
+                    <li>• अपनी विफलता स्वीकार करने का डर या अहंकार।</li>
+                </ul>
+            </div>
+            <div class="bg-green-900/20 p-8 rounded-3xl border border-green-500/30">
+                <h3 class="font-bold text-green-400 mb-4">5-स्टेप प्रोसेस विफलता</h3>
+                <p class="text-xs text-gray-300">पहचानें कि व्यक्ति किस चरण पर विफल हो रहा है:</p>
+                <div class="mt-4 flex flex-wrap gap-2 text-[10px] font-bold">
+                    <span class="bg-slate-800 px-2 py-1 rounded">1. लक्ष्य</span>
+                    <span class="bg-slate-800 px-2 py-1 rounded">2. पहचान</span>
+                    <span class="bg-slate-800 px-2 py-1 rounded text-green-400">3. निदान</span>
+                    <span class="bg-slate-800 px-2 py-1 rounded">4. डिजाइन</span>
+                    <span class="bg-slate-800 px-2 py-1 rounded">5. कार्य</span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 text-sm mt-12 pb-8">
+            <p>"यदि आपके पास वही लोग वही काम कर रहे हैं, तो वही परिणामों की अपेक्षा करें।"</p>
+        </footer>
+    </div>
+
+</body>
+</html>
