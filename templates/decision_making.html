@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effective Decision Making | Principles OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .decision-card { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255,255,255,0.08); transition: 0.3s; }
+        .decision-card:hover { border-color: #6366f1; transform: translateY(-2px); }
+        .logic-gate { border-left: 4px solid #6366f1; padding-left: 1.5rem; }
+    </style>
+</head>
+<body class="p-6 md:p-12 min-h-screen">
+
+    <div class="max-w-5xl mx-auto">
+        <header class="mb-12 border-b border-slate-800 pb-8 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-extrabold text-white mb-2">⚖️ प्रभावी निर्णय लेना</h1>
+                <p class="text-indigo-400 font-medium font-hindi">"न जानने की शक्ति को पहचानें"</p>
+            </div>
+            <a href="/" class="text-sm font-bold text-slate-400 hover:text-white bg-slate-800 px-4 py-2 rounded-lg transition">← डैशबोर्ड</a>
+        </header>
+
+        <section class="bg-indigo-900/10 p-8 rounded-3xl border border-indigo-500/30 mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-white">🎯 लक्ष्य: सर्वश्रेष्ठ उत्तर खोजना (Principle 193)</h2>
+            <p class="text-gray-300 leading-relaxed">
+                लक्ष्य यह नहीं है कि आपके पास सबसे अच्छा उत्तर हो, बल्कि यह है कि आप <strong>सर्वश्रेष्ठ उत्तर खोजें</strong>। यह उत्तर आपके बाहर भी हो सकता है। यह जानना अमूल्य है कि आप क्या नहीं जानते।
+            </p>
+        </section>
+
+        
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">📐 त्रिकोणीय परीक्षण (Triangulation)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="decision-card p-6 rounded-2xl">
+                    <h3 class="text-indigo-400 font-bold mb-2">1. विश्वसनीय लोग खोजें</h3>
+                    <p class="text-xs text-gray-400">कम से कम 3 ऐसे लोग चुनें जिन्होंने उस क्षेत्र में सफलता अर्जित की हो。</p>
+                </div>
+                <div class="decision-card p-6 rounded-2xl">
+                    <h3 class="text-indigo-400 font-bold mb-2">2. तर्क (Reasoning) पूछें</h3>
+                    <p class="text-xs text-gray-400">केवल उनके निष्कर्ष न लें, बल्कि उनके पीछे के तर्क को समझें और परखें。</p>
+                </div>
+                <div class="decision-card p-6 rounded-2xl">
+                    <h3 class="text-indigo-400 font-bold mb-2">3. खुद को चुनौती दें</h3>
+                    <p class="text-xs text-gray-400">उनसे कहें कि वे आपके तर्क की गहराई से जांच (Probe) करें。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-900 border border-slate-800 p-8 rounded-3xl mb-12">
+            <h2 class="text-xl font-bold mb-6 text-white italic">निर्णय लेते समय खुद से पूछें:</h2>
+            <div class="space-y-4">
+                <div class="logic-gate">
+                    <p class="text-sm">"मुझे क्या नहीं पता है, और मुझे इसके बारे में क्या करना चाहिए?"</p>
+                </div>
+                <div class="logic-gate">
+                    <p class="text-sm">"क्या मैंने इस समस्या के बारे में सभी महत्वपूर्ण प्रश्न पूछ लिए हैं?"</p>
+                </div>
+                <div class="logic-gate">
+                    <p class="text-sm">"क्या मैं इस बात के प्रति सचेत हूँ कि मैं गलत हो सकता हूँ?"</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-slate-500 text-sm mt-12">
+            <p>"न जानने के साथ निपटने की क्षमता जानने से कहीं अधिक शक्तिशाली है।"</p>
+        </footer>
+    </div>
+
+</body>
+</html>
