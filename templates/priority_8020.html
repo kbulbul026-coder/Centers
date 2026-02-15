@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>80/20 Prioritization | Principles OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .priority-card { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; }
+        .priority-card:hover { border-color: #fbbf24; transform: translateY(-2px); }
+        .must-do-bar { height: 8px; background: #fbbf24; border-radius: 4px; width: 0%; transition: width 1s ease-in-out; }
+    </style>
+</head>
+<body class="p-6 md:p-12 min-h-screen">
+
+    <div class="max-w-5xl mx-auto">
+        <header class="mb-12 border-b border-slate-800 pb-8 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-extrabold text-white mb-2">⚖️ 80/20 प्राथमिकता (Prioritization)</h1>
+                <p class="text-amber-400 font-medium font-hindi">"महत्वपूर्ण चीजों को पहले करें"</p>
+            </div>
+            <a href="/" class="text-sm font-bold text-slate-400 hover:text-white bg-slate-800 px-4 py-2 rounded-lg transition">← डैशबोर्ड</a>
+        </header>
+
+        <section class="bg-amber-900/10 p-8 rounded-3xl border border-amber-500/30 mb-12 text-center">
+            <h2 class="text-2xl font-bold mb-4 text-white">🍊 80% जूस केवल 20% निचोड़ने से आता है</h2>
+            <p class="text-gray-300 leading-relaxed max-w-2xl mx-auto">
+                निर्णय लेते समय केवल उन चुनिंदा (आमतौर पर 5 से कम) महत्वपूर्ण पहलुओं पर ध्यान दें जो 80% परिणाम देते हैं। विवरणों की चिंता (Detail Anxiety) से बचें।
+            </p>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="priority-card p-8 rounded-3xl border-t-4 border-amber-500">
+                <h3 class="text-lg font-bold mb-4 text-amber-500">🚨 ज़रूरी काम (Must-Do's)</h3>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li class="flex items-center gap-2">✅ इन्हें सबसे पहले 'Above the Bar' लाएँ।</li>
+                    <li class="flex items-center gap-2">✅ इन्हें उत्कृष्ट (Excellent) बनाएँ।</li>
+                    <li class="flex items-center gap-2">✅ इन पर 100% ध्यान केंद्रित करें।</li>
+                </ul>
+            </div>
+            <div class="priority-card p-8 rounded-3xl border-t-4 border-slate-500">
+                <h3 class="text-lg font-bold mb-4 text-slate-400">✨ पसंद के काम (Like-To-Do's)</h3>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li class="flex items-center gap-2">⏳ केवल तब करें जब 'Must-do's' पूरे हों।</li>
+                    <li class="flex items-center gap-2">⏳ पूर्णता (Perfection) की कोशिश केवल अंत में करें।</li>
+                    <li class="flex items-center gap-2">⏳ इन्हें मुख्य सूची में न खिसकने दें।</li>
+                </ul>
+            </div>
+        </div>
+
+        <section class="bg-slate-900 border border-slate-800 p-8 rounded-3xl mb-12">
+            <h2 class="text-xl font-bold mb-6 text-white italic text-center">निर्णय लेने के उच्च सिद्धांत</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-4 bg-slate-800/50 rounded-xl">
+                    <h4 class="text-xs font-bold text-blue-400 mb-2 uppercase">सही समय (Timing)</h4>
+                    <p class="text-[11px] text-gray-400">अतिरिक्त जानकारी प्राप्त करने के लाभ बनाम देरी की लागत के बीच संतुलन बनाएँ。</p>
+                </div>
+                <div class="p-4 bg-slate-800/50 rounded-xl">
+                    <h4 class="text-xs font-bold text-blue-400 mb-2 uppercase">संभावना (Probability)</h4>
+                    <p class="text-[11px] text-gray-400">केवल 'संभावना' न देखें, उसकी 'लिकलीहुड' (Likelihood) के आधार पर प्राथमिकता दें。</p>
+                </div>
+                <div class="p-4 bg-slate-800/50 rounded-xl">
+                    <h4 class="text-xs font-bold text-blue-400 mb-2 uppercase">पक्ष-विपक्ष (Pros/Cons)</h4>
+                    <p class="text-[11px] text-gray-400">सर्वश्रेष्ठ विकल्प वह है जिसमें विपक्ष से अधिक पक्ष हों, न कि वह जिसमें कोई कमी न हो。</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-slate-500 text-sm mt-12">
+            <p>"By and Large: अपवादों के बजाय मुख्य नियमों पर ध्यान केंद्रित करें।"</p>
+        </footer>
+    </div>
+
+</body>
+</html>
