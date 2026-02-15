@@ -385,6 +385,12 @@ def priority_8020():
 
 
 
+@app.route('/logical_decisions')
+def logical_decisions():
+    return render_template('logical_decisions.html')
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=False)
