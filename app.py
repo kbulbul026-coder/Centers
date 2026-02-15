@@ -379,6 +379,12 @@ def decision_making():
 
 
 
+@app.route('/priority_8020')
+def priority_8020():
+    return render_template('priority_8020.html')
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=False)
