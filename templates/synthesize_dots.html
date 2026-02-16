@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthesize & The Bar | Principles OS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+        body { font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .chart-box { background: rgba(30, 41, 59, 0.7); border: 1px solid rgba(255,255,255,0.08); }
+        .bar-line { width: 100%; height: 2px; position: absolute; left: 0; }
+        .excellent-bar { background-color: #3b82f6; top: 20%; }
+        .acceptable-bar { background-color: #10b981; top: 50%; }
+    </style>
+</head>
+<body class="p-6 md:p-12 min-h-screen">
+
+    <div class="max-w-5xl mx-auto">
+        <header class="mb-12 border-b border-slate-800 pb-8 flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-extrabold text-white mb-2">📈 संश्लेषण (Synthesize)</h1>
+                <p class="text-indigo-400 font-medium">"समय के साथ डॉट्स को जोड़ें और पैटर्न को समझें"</p>
+            </div>
+            <a href="/" class="text-sm font-bold text-slate-400 hover:text-white bg-slate-800 px-4 py-2 rounded-lg transition">← डैशबोर्ड</a>
+        </header>
+
+        <section class="bg-indigo-900/10 p-8 rounded-3xl border border-indigo-500/30 mb-12">
+            <h2 class="text-2xl font-bold mb-6 text-white flex items-center gap-2">
+                <span>📍</span> डॉट्स को समझना
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <p class="text-gray-300 leading-relaxed text-sm mb-4">
+                        कोई भी एक घटना (जैसे बिल न भरना) केवल एक 'डॉट' है। एक ही प्रकार के कई डॉट्स को श्रेणीबद्ध करके उनका समय के साथ विश्लेषण करें।
+                    </p>
+                    <ul class="text-xs text-gray-400 space-y-2 italic">
+                        <li>• "क्या यह एक बार की गलती है या बार-बार हो रही है?"</li>
+                        <li>• "डॉट्स को जोड़कर ही आप पूरी तस्वीर देख सकते हैं।"</li>
+                    </ul>
+                </div>
+                <div class="h-48 bg-slate-800 rounded-xl relative overflow-hidden border border-slate-700 p-4">
+                    <span class="absolute left-2 top-2 text-[10px] text-green-400 font-bold">GOOD</span>
+                    <span class="absolute left-2 bottom-2 text-[10px] text-red-400 font-bold">BAD</span>
+                    <span class="absolute right-2 bottom-2 text-[10px] text-slate-500 font-bold">TIME →</span>
+                    
+                    <div class="absolute w-3 h-3 bg-red-400 rounded-full left-[20%] bottom-[30%]"></div>
+                    <div class="absolute w-3 h-3 bg-amber-400 rounded-full left-[40%] bottom-[45%]"></div>
+                    <div class="absolute w-3 h-3 bg-green-400 rounded-full left-[60%] top-[40%]"></div>
+                    <div class="absolute w-3 h-3 bg-green-500 rounded-full left-[80%] top-[25%]"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="chart-box p-8 rounded-3xl mb-12">
+            <h2 class="text-xl font-bold mb-6 text-white text-center">
+                स्वीकार्य सुधार दर (The Acceptable Bar)
+            </h2>
+            <div class="relative h-64 bg-slate-900 rounded-xl border border-slate-700 p-4 mb-6">
+                <div class="bar-line excellent-bar"></div>
+                <span class="absolute left-2 top-[16%] text-[10px] text-blue-400 font-bold tracking-widest">EXCELLENT BAR</span>
+                
+                <div class="bar-line acceptable-bar"></div>
+                <span class="absolute left-2 top-[46%] text-[10px] text-green-400 font-bold tracking-widest">ACCEPTABLE BAR</span>
+                
+                <svg class="absolute inset-0 h-full w-full" preserveAspectRatio="none">
+                    <line x1="10%" y1="90%" x2="40%" y2="40%" stroke="#10b981" stroke-width="2" stroke-dasharray="4" />
+                    <text x="35%" y="35%" fill="#10b981" font-size="12" font-weight="bold">A</text>
+                    
+                    <line x1="10%" y1="90%" x2="80%" y2="60%" stroke="#ef4444" stroke-width="2" stroke-dasharray="4" />
+                    <text x="75%" y="65%" fill="#ef4444" font-size="12" font-weight="bold">B</text>
+                </svg>
+            </div>
+            <p class="text-sm text-gray-300 text-center max-w-2xl mx-auto">
+                "सुधार हो रहा है" यह पर्याप्त नहीं है यदि प्रक्षेपवक्र (Trajectory) स्वीकार्य समय में 'Acceptable Bar' को पार नहीं करता है।
+            </p>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-red-900/20 p-6 rounded-2xl border border-red-500/30">
+                <h3 class="font-bold text-red-400 mb-2 text-sm uppercase">समझौता न करें</h3>
+                <p class="text-xs text-gray-300 leading-relaxed">
+                    लोगों को उनकी गलतियों का पता लगाने से बचने न दें क्योंकि यह दर्दनाक है। उस पर समझौता करने के प्रलोभन से बचें जो गैर-समझौतावादी (Uncompromisable) है।
+                </p>
+            </div>
+            <div class="bg-amber-900/20 p-6 rounded-2xl border border-amber-500/30">
+                <h3 class="font-bold text-amber-400 mb-2 text-sm uppercase">सबको खुश न करें</h3>
+                <p class="text-xs text-gray-300 leading-relaxed">
+                    आपके द्वारा लिए गए हर फैसले से हर कोई खुश नहीं होगा, खासकर वे फैसले जो कहते हैं कि वे कुछ नहीं कर सकते। 
+                </p>
+            </div>
+        </div>
+
+        <footer class="text-center text-slate-500 text-xs italic">
+            © 2026 | Principles OS - Pattern Recognition Module
+        </footer>
+    </div>
+
+</body>
+</html>
