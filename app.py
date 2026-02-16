@@ -389,6 +389,10 @@ def priority_8020():
 def logical_decisions():
     return render_template('logical_decisions.html')
 
+@app.route('/synthesize_dots')
+def synthesize_dots():
+    return render_template('synthesize_dots.html')
+
 
 
 
