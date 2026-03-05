@@ -2,69 +2,114 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>नॉलेज वॉल्ट | 22 पुस्तकें</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नॉलेज वॉल्ट | 24 पुस्तकें | Principles OS</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap');
+        
         :root {
             --gold: #d4af37;
-            --dark-blue: #2c3e50;
-            --accent-blue: #3498db;
-            --bg-gray: #f8f9fa;
-            --deep-work: #e74c3c;
+            --dark-blue: #1e293b;
+            --accent-blue: #3b82f6;
+            --bg-dark: #0f172a;
+            --text-light: #f8fafc;
+            --dalio-red: #ef4444;
+            --stoic-orange: #f59e0b;
         }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg-gray); margin: 0; padding: 40px; color: #333; }
-        .container { max-width: 1100px; margin: auto; }
+        
+        body { 
+            font-family: 'Inter', 'Noto Sans Devanagari', sans-serif; 
+            background: var(--bg-dark); 
+            margin: 0; 
+            padding: 40px 20px; 
+            color: var(--text-light); 
+        }
+        
+        .container { max-width: 1200px; margin: auto; }
         
         /* Header & Stats */
-        .header { text-align: center; margin-bottom: 40px; }
-        .stats-badge { background: var(--gold); color: white; padding: 10px 25px; border-radius: 30px; font-weight: bold; box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3); }
+        .header { text-align: center; margin-bottom: 50px; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 15px; }
+        .stats-badge { 
+            background: linear-gradient(135deg, var(--gold), #b8860b); 
+            color: white; 
+            padding: 12px 30px; 
+            border-radius: 30px; 
+            font-weight: bold; 
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2); 
+            display: inline-block;
+        }
 
         /* Book Grid Layout */
-        .book-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+        .book-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
         .book-card { 
-            background: white; padding: 20px; border-radius: 12px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--accent-blue);
-            transition: 0.3s; height: 100px; display: flex; flex-direction: column; justify-content: center;
+            background: rgba(30, 41, 59, 0.7); 
+            padding: 20px; 
+            border-radius: 12px; 
+            border: 1px solid rgba(255,255,255,0.05);
+            border-left: 5px solid var(--accent-blue);
+            transition: all 0.3s ease; 
+            height: 110px; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center;
         }
-        .book-card:hover { transform: translateY(-5px); border-left-color: var(--gold); }
-        .book-card h4 { margin: 0; font-size: 1rem; color: var(--dark-blue); }
-        .book-card p { font-size: 0.8em; color: #7f8c8d; margin-top: 5px; }
+        .book-card:hover { transform: translateY(-5px); border-left-color: var(--gold); background: rgba(30, 41, 59, 0.9); }
+        .book-card h4 { margin: 0 0 8px 0; font-size: 1rem; color: #e2e8f0; }
+        .book-card p { font-size: 0.8em; color: #94a3b8; margin: 0; }
+
+        /* Category Headers */
+        .category-title { grid-column: 1 / -1; margin: 30px 0 10px 0; font-size: 1.2rem; color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
 
         /* Special Cards */
         .special-card { 
-            grid-column: 1 / -1; background: white; padding: 30px; 
-            border-radius: 15px; margin-top: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            grid-column: 1 / -1; 
+            background: rgba(30, 41, 59, 0.8); 
+            padding: 30px; 
+            border-radius: 16px; 
+            margin-top: 20px; 
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
-        .deep-work-card { border-left: 10px solid var(--deep-work); }
-        .eq-card { border-top: 8px solid #8e44ad; }
-        .covey-card { background: var(--dark-blue); color: white; border-left: 10px solid var(--gold); }
+        
+        .principles-card { border-left: 10px solid var(--dalio-red); background: linear-gradient(145deg, rgba(30,41,59,1), rgba(15,23,42,1)); }
+        .deep-work-card { border-left: 8px solid #e74c3c; }
+        .covey-card { border-left: 8px solid var(--accent-blue); }
+        .stoic-card { border-left: 8px solid var(--stoic-orange); background: linear-gradient(145deg, rgba(30,41,59,1), rgba(15,23,42,1)); }
 
-        /* Habit Tags */
-        .habit-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-        .habit-tag { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); padding: 8px 15px; border-radius: 8px; font-size: 0.9em; }
+        /* Tags */
+        .tag-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .tag { background: rgba(255,255,255,0.1); padding: 6px 12px; border-radius: 6px; font-size: 0.8em; color: #cbd5e1; }
+        .tag-stoic { border: 1px solid var(--stoic-orange); color: #fcd34d; }
 
-        .btn-back { display: block; text-align: center; margin-top: 50px; text-decoration: none; color: var(--accent-blue); font-weight: bold; }
+        .btn-back { display: block; text-align: center; margin-top: 50px; text-decoration: none; color: var(--accent-blue); font-weight: bold; padding: 15px; border-radius: 8px; transition: 0.3s; }
+        .btn-back:hover { background: rgba(59, 130, 246, 0.1); }
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="header">
-        <h1>📚 मेरा नॉलेज वॉल्ट (Knowledge Vault)</h1>
-        <span class="stats-badge">🎯 22 महान पुस्तकें पूरी हुईं</span>
+        <h1>📚 मेरा नॉलेज वॉल्ट</h1>
+        <div class="stats-badge">🎯 24 महान पुस्तकें पूरी हुईं</div>
     </div>
 
     <div class="book-grid">
+        
+        <div class="category-title">💰 वित्तीय बुद्धिमत्ता (Financial Intelligence)</div>
         <div class="book-card"><h4>1. Rich Dad Poor Dad</h4><p>रॉबर्ट कियोसाकी</p></div>
-        <div class="book-card"><h4>2. Cashflow Quadrant</h4><p>रॉबर्ट कियोसाकी</p></div>
-        <div class="book-card"><h4>3. Millionaire Fastlane</h4><p>एमजे डीमार्को</p></div>
-        <div class="book-card"><h4>4. Richest Man in Babylon</h4><p>जॉर्ज एस. क्लैसन</p></div>
-        <div class="book-card"><h4>5. Psychology of Money</h4><p>मॉर्गन हाउससेल</p></div>
+        <div class="book-card"><h4>2. The Cashflow Quadrant</h4><p>रॉबर्ट कियोसाकी</p></div>
+        <div class="book-card"><h4>3. The Millionaire Fastlane</h4><p>एमजे डीमार्को</p></div>
+        <div class="book-card"><h4>4. The Richest Man in Babylon</h4><p>जॉर्ज एस. क्लैसन</p></div>
+        <div class="book-card"><h4>5. The Psychology of Money</h4><p>मॉर्गन हाउससेल</p></div>
         <div class="book-card"><h4>6. Think and Grow Rich</h4><p>नेपोलियन हिल</p></div>
         
+        <div class="category-title">🧘‍♂️ दर्शन और व्यक्तिगत विकास (Philosophy & Growth)</div>
         <div class="book-card"><h4>7. The Secret</h4><p>रोंडा बर्न</p></div>
-        <div class="book-card"><h4>8. Ikigai</h4><p>जापानी रहस्य</p></div>
+        <div class="book-card"><h4>8. Ikigai</h4><p>हेक्टर गार्सिया</p></div>
         <div class="book-card"><h4>9. The Alchemist</h4><p>पाउलो कोएल्हो</p></div>
-        <div class="book-card"><h4>10. How to Win Friends</h4><p>डेल कार्नेगी</p></div>
+        <div class="book-card"><h4>10. How to Win Friends...</h4><p>डेल कार्नेगी</p></div>
         <div class="book-card"><h4>11. Siddhartha</h4><p>हर्मन हेस</p></div>
         <div class="book-card"><h4>12. Monk Who Sold His Ferrari</h4><p>रॉबिन शर्मा</p></div>
         <div class="book-card"><h4>13. The 5 AM Club</h4><p>रॉबिन शर्मा</p></div>
@@ -74,28 +119,41 @@
         <div class="book-card"><h4>17. Atomic Habits</h4><p>जेम्स क्लियर</p></div>
         <div class="book-card"><h4>18. Subconscious Mind</h4><p>जोसेफ मर्फी</p></div>
         <div class="book-card"><h4>19. Man's Search for Meaning</h4><p>विक्टर फ्रैंकल</p></div>
+        <div class="book-card"><h4>20. Emotional Intelligence</h4><p>डैनियल गोलमैन</p></div>
+
+        <div class="category-title mt-8">⚙️ द मास्टर फ्रेमवर्क (The Master Frameworks)</div>
+        
+        <div class="special-card covey-card">
+            <h3 style="color: var(--accent-blue); margin-top: 0; font-size: 1.3rem;">💎 21. 7 Habits of Highly Effective People</h3>
+            <p style="color: #cbd5e1; font-size: 0.95rem;">स्टीफन कोवे • निर्भरता से परस्पर निर्भरता (Synergy) तक का सफर। यह व्यक्तिगत नेतृत्व का आधार है।</p>
+        </div>
 
         <div class="special-card deep-work-card">
-            <h3 style="color: var(--deep-work); margin-top: 0;">🎯 20. Deep Work – Cal Newport</h3>
-            <p>यह आपकी 'मशीन' की दक्षता बढ़ाने का मूल मंत्र है। आपने सीखा: बिना विक्षेपण (Distraction) के उच्च-मूल्य वाले कार्य करना और 'उथले काम' (Shallow work) को कम करना।</p>
+            <h3 style="color: #e74c3c; margin-top: 0; font-size: 1.3rem;">🎯 22. Deep Work</h3>
+            <p style="color: #cbd5e1; font-size: 0.95rem;">कैल न्यूपोर्ट • बिना विक्षेपण के अत्यधिक एकाग्रता। कोडिंग और जटिल समस्याओं को सुलझाने की महाशक्ति।</p>
         </div>
 
-        <div class="special-card eq-card">
-            <h3 style="color: #8e44ad; margin-top: 0;">🧠 21. Emotional Intelligence – Daniel Goleman</h3>
-            <p>यह आपके 'Self-Science' का आधार है। आपने सीखा: आत्म-जागरूकता, आत्म-नियमन, प्रेरणा, सहानुभूति और सामाजिक कौशल।</p>
+        <div class="special-card principles-card">
+            <h2 style="color: var(--dalio-red); margin-top: 0; font-size: 1.6rem;">⚙️ 23. Principles</h2>
+            <p style="color: #e2e8f0; font-size: 1.05rem; line-height: 1.6;">रे डेलियो • <strong>The Operating System of Life & Management.</strong> <br>
+            इस पुस्तक ने आपको सिखाया है कि जीवन, परिवार और करियर को एक "मशीन" के रूप में कैसे देखा जाए। इसके 5-स्टेप प्रोसेस (लक्ष्य → समस्या → निदान → डिजाइन → कार्य) ने आपके बाकी सभी ज्ञान को एक तार्किक ढांचे में बांध दिया है।</p>
+            <div class="tag-container">
+                <span class="tag">Radical Truth</span>
+                <span class="tag">Radical Transparency</span>
+                <span class="tag">The 5-Step Process</span>
+                <span class="tag">Machine Design</span>
+                <span class="tag">Expected Value Math</span>
+            </div>
         </div>
 
-        <div class="special-card covey-card">
-            <h2 style="margin-top: 0; color: var(--gold);">💎 22. 7 Habits of Highly Effective People – Stephen Covey</h2>
-            <p>यह आपके पूरे लाइफ डैशबोर्ड का "ऑपरेटिंग सिस्टम" है। इसने आपको 'निर्भरता' से 'स्वतंत्रता' और फिर 'परस्पर निर्भरता' की ओर बढ़ना सिखाया।</p>
-            <div class="habit-container">
-                <div class="habit-tag">1. प्रोएक्टिव बनें</div>
-                <div class="habit-tag">2. अंत को ध्यान में रखकर शुरू करें</div>
-                <div class="habit-tag">3. पहले ज़रूरी काम पहले</div>
-                <div class="habit-tag">4. जीत-जीत सोचें</div>
-                <div class="habit-tag">5. पहले समझें, फिर समझे जाएं</div>
-                <div class="habit-tag">6. तालमेल (Synergy)</div>
-                <div class="habit-tag">7. आरी तेज़ करें</div>
+        <div class="special-card stoic-card">
+            <h2 style="color: var(--stoic-orange); margin-top: 0; font-size: 1.6rem;">⛰️ 24. The Obstacle Is the Way</h2>
+            <p style="color: #e2e8f0; font-size: 1.05rem; line-height: 1.6;">रयान हॉलिडे • <strong>Stoicism (स्टोइक दर्शन) का व्यावहारिक उपयोग।</strong> <br>
+            इस पुस्तक ने सिखाया कि बाधाएं (Obstacles) हमें रोकती नहीं हैं, बल्कि वे ही हमारे आगे बढ़ने का मार्ग (The Way) हैं। जो रास्ते में खड़ा होता है, वही रास्ता बन जाता है।</p>
+            <div class="tag-container">
+                <span class="tag tag-stoic">1. धारणा (Perception)</span>
+                <span class="tag tag-stoic">2. कर्म (Action)</span>
+                <span class="tag tag-stoic">3. इच्छाशक्ति (Will)</span>
             </div>
         </div>
     </div>
